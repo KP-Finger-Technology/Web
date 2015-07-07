@@ -1,0 +1,71 @@
+/**
+ *
+ * --------------------------------------------------
+ * Shortcodes - template specific elements - CSS file
+ * --------------------------------------------------
+ *
+ **/
+
+/*
+ *
+ * 6. Shortcodes
+ *
+ *
+------------------------------------ */
+
+/* 6.3. Template specific elements
+==================================== */
+
+/* Image Tabs */
+div.gk-tab {
+	background: transparent url(../images/style1/tabs_big_icons.png) no-repeat 0 0;
+    clear: both;
+   	float: left;
+    height: 200px;
+    margin: 0 60px 0 0;
+    text-indent: -9999px;
+    width: 199px;
+}
+
+p.gk-tab {
+	color: #000;
+	font-size: 16px;
+}
+
+h2.gk-tab {
+    color: #a6a6a6 !important;
+    font-size: 56px;
+    line-height: 52px !important;
+    padding: 0 0 23px 0;
+}
+.gk-tab > span{
+    color: #E25527;
+}
+div.gk-tab {
+     background-position: -400px 0;
+}
+div.gk-tab[data-style="style1"] {
+     background-position: -400px 0;
+}
+div.gk-tab[data-style="style2"] {
+     background-position: 0 0;
+}
+div.gk-tab[data-style="style3"] {
+     background-position: -200px 0;
+}
+div.gk-tab[data-style="style4"] {
+     background-position: -600px 0;
+}
+div.gk-tab[data-style="style5"] {
+     background-position: -800px 0;
+}
+div.gk-tab[data-style="style6"] {
+     background-position: -1000px 0;
+}
+div.gk-tab[data-style="style7"] {
+     background-position: -1200px 0;
+}
+div.gk-tab[data-style="style8"] {
+     background-position: -1400px 0;
+}
+

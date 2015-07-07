@@ -1,0 +1,574 @@
+/**
+ *
+ * -------------------------------------------
+ * Style2
+ * -------------------------------------------
+ *
+ **/
+
+/*
+ *
+ * 13. Style II
+ *
+ *
+------------------------------------ */
+
+/* 13.1. Basic colors
+==================================== */
+
+body {
+	background: #f9f9f9;
+}
+
+a {
+	color: #e25527;
+}
+
+h1, h2, h3, h4, h5 {
+	color: #e25527;
+
+}
+
+#gk-bg {
+    background: url("../images/pattern_bg.jpg") repeat 0 0;
+    background: url("../images/bottom_bg.png") repeat-x 0 bottom,
+    #F9F9F9; no-repeat center top, 
+    url('../images/pattern_bg.jpg') repeat 0 0;
+}
+
+/* Rules only for IE8 where are added two additional divs */
+#gk-bg > div {
+	background: url('../images/main_bg.jpg') no-repeat center top;
+}
+
+#gk-bg > div > div {
+	background: url('../images/bottom_bg.png') repeat-x 0 bottom;
+}
+
+#gk-mainbody-wrap {
+	-webkit-box-shadow: 0 1px 3px #c24921;
+	   -moz-box-shadow: 0 1px 3px #c24921;
+			box-shadow: 0 1px 3px #c24921;
+}
+
+#main-menu {
+	-webkit-box-shadow: 0 1px 3px #c24921;
+	   -moz-box-shadow: 0 1px 3px #c24921;
+			box-shadow: 0 1px 3px #c24921;
+}
+
+/* 13.2. Header (Top Menu, logo)
+==================================== */
+#gk-head a.cssLogo {
+	background: transparent url('../images/style1/logo.png') no-repeat 0 0;
+}
+
+
+#gk-top-menu li a:active,
+#gk-top-menu li a:hover,
+#gk-top-menu li a:focus {
+	color: #e25527;
+}
+
+#gk-user-area a {
+	background: #fcda3b;
+	color: #353639;
+	text-shadow: 0 1px 1px #fff;
+}
+
+#gk-user-area a:hover {
+	color: #353639;
+	text-shadow: 0 1px 1px #fff;
+}
+
+#gk-search input[type="text"] {
+	background-color: #ee6934;
+	background-image: url('../images/style1/search_bg.png');
+	-webkit-box-shadow: 0px 1px 3px #c24921;
+	   -moz-box-shadow: 0px 1px 3px #c24921;
+			box-shadow: 0px 1px 3px #c24921;
+}
+
+.gk-breadcrumbs > a::after {
+	background: #f89a4f;
+}
+
+#main-menu .sub-menu li a:hover {
+	color: #e25527;
+}
+
+#main-menu > li > a {
+	color: #e25527;
+}
+
+/* 13.3. Frontpage Header
+==================================== */
+
+.gk-is-wrapper-gk_appsprotech .gk-is-pagination::before,
+.gk-is-wrapper-gk_appsprotech .gk-is-pagination::after {
+	background: transparent url('../images/style1/pagination_lines.png') no-repeat center bottom;
+}
+
+.gk-is-wrapper-gk_appsprotech .gk-is-pagination::before {
+    background: transparent url('../images/style1/pagination_lines.png') no-repeat center 0;
+}
+
+.gk-is-wrapper-gk_appsprotech .gk-is-pagination > ol li a {
+	background: #f67c40;
+}
+
+.box.big-tabs .gk-tabs-wrap > ol li {
+	background: url('../../images/style1/tabs_small_icons.png') no-repeat 0 0;
+}
+
+div.gk-tab {
+	background: transparent url(../../images/style1/tabs_big_icons.png) no-repeat 0 0;
+}
+
+
+.gk-tab > span {
+	/*color: #e25527 !important;*/
+	color: white !important;
+	/*background: #F9F9F9 !important;*/
+	/*background: #16C5FE !important;*/
+	border-radius: 15px !important;
+	-moz-box-shadow:inset -1px 0px 0px -1px #dcecfb;
+	-webkit-box-shadow:inset -1px 0px 0px -1px #dcecfb;
+	box-shadow:inset -1px 0px 0px -1px #dcecfb;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea) );
+	background:-moz-linear-gradient( center top, #bddbfa 5%, #80b5ea 100% );
+	text-decoration:none;
+	text-align:left;
+	text-indent:-13.44px;
+	font-family:Times New Roman;
+	font-size:37px;
+}
+.gk-tab > span:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #80b5ea), color-stop(1, #bddbfa) );
+	background:-moz-linear-gradient( center top, #80b5ea 5%, #bddbfa 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#80b5ea', endColorstr='#bddbfa');
+	background-color:#80b5ea;
+	opacity:0.88;
+}
+
+.gk-tab > span:active {
+position:relative;
+	top:5px;
+}
+
+
+
+.gk-tab > span > a {
+padding-right:2px !important;
+padding-top:7px !important;
+padding-bottom:7px !important;
+text-indent:-50px;
+}
+
+/* 13.4. Top and Bottom widgets
+==================================== */
+#gk-top1 .box,
+#gk-bottom1 .box {
+	color: #ffb69e;
+}
+
+#gk-top1 a:hover,
+#gk-top1 a:active,
+#gk-top1 a:focus,
+#gk-bottom1 a:hover,
+#gk-bottom1 a:active,
+#gk-bottom1 a:focus {
+	color: #ffb69e!important;
+}
+
+/* 13.5. Article
+==================================== */
+#gk-mainbody article > header h1 {
+	color: #e25527;
+}
+
+time.entry-date {
+	background: #e25527;
+}
+
+article header h1 sup,
+article.sticky header h1 sup,
+article header h2 sup,
+article.sticky header h2 sup {
+	background: #e25527;
+}
+
+article dl.tags a {
+	background: #f89a4f url(../images/style1/tags.png) no-repeat 0 0;
+}
+
+.tagcloud .tag-cloud {
+	border-top: 4px solid #F89A4F!important;
+}
+
+.content dl.post-fields {
+	border-top: 4px solid #F89A4F;
+}
+
+article > footer {
+	border-top-color: #f89a4f!important;
+}
+
+#comments > h2:first-child {
+	color: #e25527;
+}
+
+.comments > a {
+	background: url(../images/style1/comment.png) no-repeat 0 0;
+}
+
+#respond > h3 {
+	color: #e25527;
+}
+
+.btn,
+button,
+.readon,
+a.gk-button,
+.attach-btn a,
+.pagenav a,
+input[type="button"],
+input[type="submit"] {
+	background: #e25527;
+}
+
+/* 13.6. Post Formats
+==================================== */
+.gk-format-aside {
+	background: #fff url('../images/post_formats/format-aside.png') no-repeat center center;
+}
+
+.gk-format-audio { 
+	background: #fff url('../images/post_formats/format-audio.png') no-repeat center center;
+}
+
+.gk-format-chat { 
+	background: #fff url('../images/post_formats/format-chat.png') no-repeat center center;
+}
+
+.gk-format-gallery { 
+	background: #fff url('../images/post_formats/format-gallery.png') no-repeat center center;
+}
+
+.gk-format-image { 
+	background: #fff url('../images/post_formats/format-image.png') no-repeat center center;
+}
+
+.gk-format-link { 
+	background: #fff url('../images/post_formats/format-link.png') no-repeat center center;
+}
+
+.gk-format-quote { 
+	background: #fff url('../images/post_formats/format-quote.png') no-repeat center center;
+}
+
+.gk-format-status { 
+	background: #fff url('../images/post_formats/format-status.png') no-repeat center center;
+}
+
+.gk-format-video { 
+	background: #fff url('../images/post_formats/format-video.png') no-repeat center center;
+}
+
+
+/* 13.7. Box, suffixes
+==================================== */
+
+.box.menu ul li a:active,
+.box.menu ul li a:focus,
+.box.menu ul li a:hover {
+	color: #ffb69e;
+}
+
+.box.menu ul li:hover:before {
+	background: #ffb69e;
+}
+
+#gk-mainbody-wrap .box.menu ul li:hover:before {
+	background: #e25527;
+}
+
+#gk-mainbody-wrap .box.color1,
+#gk-mainbody-wrap .box.color1 .box-title {
+	color: #e25527!important;
+}
+
+#gk-mainbody-wrap .box.color2 {
+	background: #e25527;
+}
+
+#gk-mainbody-wrap .box.color2 a:hover,
+#gk-mainbody-wrap .box.color2 a:active,
+#gk-mainbody-wrap .box.color2 a:focus {
+	color: #ffb69e !important;
+}
+
+#gk-mainbody-wrap .box.border > div {
+	border: 4px solid #e25527;
+}
+
+#gk-mainbody-wrap .box.menu ul li a:active,
+#gk-mainbody-wrap .box.menu ul li a:focus,
+#gk-mainbody-wrap .box.menu ul li a:hover {
+	color: #e25527;
+}
+
+#gk-mainbody-wrap .box.menu ul li:hover:before {
+	color: #e25527;
+}
+
+.box.dark a:hover,
+.box.dark a:active,
+.box.dark a:focus {
+	color: #e25527 !important;
+}
+
+.box.color2 a {
+	color: #e25527 !important;
+}
+
+.box.advertisement .box-title {
+	border-bottom: 1px solid #ffb69e;
+	color: #ffb69e!important;
+}
+
+/* 13.8. GK widgets
+==================================== */
+/* Gk-Tabs */
+#gk-mainbody-wrap .gk-tabs-wrap > ol li {
+	color: #353639;
+}
+
+.gk-tabs-wrap > ol li.active,
+.gk-tabs-wrap > ol li.active:hover {
+	color: #e25527;	
+}
+
+.gk-tabs-wrap > ol li:hover {
+	color: #ffb69e;
+}
+
+/* GK ImageShow */
+.gk-is-wrapper-gk_appsprotech .gk-is-text p {
+	color: #ffc9b1;
+}
+
+/* GK NewsShowPro */
+
+.gk-nsp-next,
+.gk-nsp-prev,
+#gk-mainbody-wrap .box.color2 .gk-nsp-next,
+#gk-mainbody-wrap .box.color2 .gk-nsp-prev {
+	background: transparent url('../images/nsp_interface.png') no-repeat -31px 0px;
+}
+
+#gk-mainbody-wrap .gk-nsp-next,
+#gk-mainbody-wrap .gk-nsp-prev,
+.box.color2 .gk-nsp-next,
+.box.color2 .gk-nsp-prev {
+	background: transparent url('../images/nsp_interface.png') no-repeat -31px -40px;
+}
+
+.gk-nsp-prev,
+#gk-mainbody-wrap .box.color2 .gk-nsp-prev {
+	background-position: -12px 0px;
+}
+
+#gk-mainbody-wrap .gk-nsp-prev,
+.box.color2 .gk-nsp-prev {
+	background-position: -12px -40px;
+	margin-left: 4px;
+}
+
+.gk-nsp-arts-nav ul li,
+.gk-nsp-links-nav ul li {
+	background: #ffa879;
+}
+
+.gk-nsp-arts-nav li:hover,
+.gk-nsp-arts-nav li.active,
+.gk-nsp-links-nav li:hover,
+.gk-nsp-links-nav li.active,
+#gk-mainbody-wrap .box.color2 .gk-nsp-arts-nav ul li:hover,
+#gk-mainbody-wrap .box.color2 .gk-nsp-arts-nav ul li.active,
+#gk-mainbody-wrap .box.color2 .gk-nsp-links-nav ul li:hover,
+#gk-mainbody-wrap .box.color2 .gk-nsp-links-nav ul li.active {
+	background: #fff;
+}
+
+#gk-mainbody-wrap .gk-nsp-arts-nav li:hover,
+#gk-mainbody-wrap .gk-nsp-arts-nav li.active,
+#gk-mainbody-wrap .gk-nsp-links-nav li:hover,
+#gk-mainbody-wrap .gk-nsp-links-nav li.active,
+.box.color2 .gk-nsp-arts-nav ul li:hover,
+.box.color2 .gk-nsp-arts-nav ul li.active,
+.box.color2 .gk-nsp-links-nav ul li:hover,
+.box.color2 .gk-nsp-links-nav ul li.active,
+#gk-mainbody-wrap .box.color2 .gk-nsp-arts-nav ul li,
+#gk-mainbody-wrap .box.color2 .gk-nsp-links-nav ul li {
+	background: #ffa879;
+}
+
+#gk-mainbody-wrap .gk-nsp-arts-nav ul li,
+#gk-mainbody-wrap .gk-nsp-links-nav ul li,
+.box.color2 .gk-nsp-arts-nav ul li,
+.box.color2 .gk-nsp-links-nav ul li {
+	background: #e25527;
+}
+
+/* 13.9. Footer
+==================================== */
+
+#gk-bottom2 a:active,
+#gk-bottom2 a:focus,
+#gk-bottom2 a:hover {
+	color: #e25527;
+}
+
+
+/* 13.10. Typography
+==================================== */
+
+.gk-warning {
+	background: url(../images/style1/typography/tips_small.png) no-repeat 0 0;
+	color: #f89a4f;
+}
+
+pre.gk-code {
+	border-left: 4px solid #f89a4f;
+}
+
+pre.gk-code[data-style="style2"] {
+	border-left: 4px solid #e25527;
+}
+
+pre.gk-code[data-style="style3"] h4 {
+	background: #e25527;
+	color: #fff;
+	text-align: center;
+	text-shadow: none;
+}
+
+.gk-textblock[data-style="style2"] {
+	border: 2px dotted #e25527;
+}
+
+.gk-textblock[data-style="style3"] {
+	border: 2px dotted #f89a4f;
+}
+
+.gk-textblock[data-style="style8"] {
+	background: #e25527;
+	border: none;
+	color: #fff !important;
+}
+
+.gk-textblock[data-style="style9"] {
+	background: #f89a4f;
+	border: none;
+	color: #fff !important;
+}
+
+.gk-numblock[data-style="style2"] span {
+	background: #f89a4f;
+}
+
+.gk-numblock[data-style="style3"] span {
+	background: #e25527;
+}
+
+.gk-floated {
+	color: #e25527;
+}
+
+article ul[data-style="style1"] li {
+	background: url(../images/style1/typography/bullet1.png) no-repeat 0 8px !important
+}
+
+article ul[data-style="style2"] li {
+	background: url(../images/style1/typography/bullet2.png) no-repeat 0 8px !important
+}
+
+article ul[data-style="style3"] li {
+	background: url(../images/style1/typography/bullet3.png) no-repeat 0 8px !important
+}
+
+article ul[data-style="style4"] li {
+	background: url(../images/style1/typography/bullet4.png) no-repeat 0 8px !important
+}
+
+article ul[data-style="style6"] li::before {
+	background: #e25527;
+}
+
+article ul[data-style="style8"] li::before {
+	background: #e25527;
+}
+
+.gk-legend[data-style="style2"] > strong {
+    color: #f89a4f;
+}
+
+.gk-legend[data-style="style3"] > strong {
+	color: #e25527;
+}
+
+.gk-legend[data-style="style2"] {
+	border: 1px solid #f89a4f;
+}
+
+.gk-legend[data-style="style3"] {
+	border: 1px solid #e25527;
+}
+
+.gk-note:before,
+.gk-members > strong:first-child {
+	background: #e25527;
+}
+
+/* 13.11. Others
+==================================== */
+
+/* Sidebar */
+#gk-sidebar a:hover {
+	color: #ffb69e;
+}
+
+#gk-sidebar {
+	color: #ffb69e;
+}
+
+.widget_gk_comments li > p small {
+	color: #ffb69e;;
+}
+
+.box.tags .tagcloud a {
+	background: url(../images/style1/tags_aside.png) no-repeat 0 100%;
+}
+
+
+.archivepage .widget li small {
+	color: #e25527;
+}
+
+#gallery ol li:hover,
+#gallery ol li.active {
+	background: #e25527!important;
+}
+
+#gk-popup-login .button-primary {
+	background: #e25527;
+}
+
+.contactpage .gk-error, .contactpage .gk-thanks {
+	background: #E25527;
+}
+
+#gk-contact span.error {
+	color: #E25527;
+}

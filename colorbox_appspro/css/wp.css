@@ -1,0 +1,712 @@
+/**
+ *
+ * -------------------------------------------
+ * Template CSS file
+ * -------------------------------------------
+ * 
+ **/
+ 
+/*
+ *
+ * 5. Wordpress elements styling
+ *
+ *
+------------------------------------ */
+ 
+/* 5.1. Main menu
+==================================== */ 
+
+#main-menu {
+	background: transparent url(../images/style1/menu_bg.png) repeat-x 0 0;
+	-webkit-box-shadow: 0 1px 3px #c24921;
+  	   -moz-box-shadow: 0 1px 3px #c24921;
+        -ms-box-shadow: 0 1px 3px #c24921;
+	        box-shadow: 0 1px 3px #c24921;
+	-webkit-border-radius: 20px;   
+       -moz-border-radius: 20px;
+ 			border-radius: 20px;
+	display: inline-block;
+	height: 39px;
+	margin: 0;
+	padding: 0 32px;
+	position: relative;	
+	text-align: center;
+	z-index: 1000;
+}
+
+#main-menu ul {
+	margin: 0;
+
+}
+
+#main-menu > li {
+	background: transparent url(../images/style1/menu_bg.png) no-repeat left -39px;
+	float: left;
+	font-size: 18px;
+	font-weight: normal;
+	height: 39px;
+}
+
+#main-menu > li:first-child {
+	background: none
+}
+
+#main-menu > li > a {
+	display: block;
+	height: 39px;
+	line-height: 40px;
+	margin: 0;
+	padding: 0 25px;
+	text-shadow: 0 1px 1px #fff
+}
+
+#main-menu > li:hover,
+#main-menu > li > a:hover,
+#main-menu > li.active > a,
+#main-menu > li.current-menu-item,
+#main-menu > li.current_page_item,
+#main-menu > li.current-menu-item > a,
+#main-menu > li.current_page_item > a,
+#main-menu > li.current-menu-ancestor > a, 
+#main-menu > li.current-menu-parent > a  {
+	color: #353639
+}
+
+/* Submenu */
+#main-menu .sub-menu {
+	background: #fff;
+	-webkit-box-shadow: 0 3px 3px #ddd;
+	   -moz-box-shadow: 0 3px 3px #ddd;  
+	    -ms-box-shadow: 0 3px 3px #ddd; 
+	        box-shadow: 0 3px 3px #ddd;
+    -webkit-border-radius: 8px;
+	   -moz-border-radius: 8px;
+	        border-radius: 8px;
+	left: -9999px;
+	margin-top: 25px;
+	padding: 6px 0;
+	position: absolute;
+	text-align: left;
+}
+
+#main-menu .sub-menu ul {
+    background: transparent url(../images/style1/tabs_arrow.png) no-repeat scroll 5px 8px;
+   	margin-top: -32px;    
+}
+
+#main-menu .sub-menu .sub-menu ul {
+    background: none;
+    margin-top: -27px;
+}
+
+#main-menu li:hover .sub-menu {
+	left: auto;
+}
+
+#main-menu .sub-menu li {
+	border-top: 1px solid #eee;
+	font-weight: normal;
+	margin: 0 20px;
+	min-width: 160px;
+	padding: 1px 0;
+}
+
+#main-menu .sub-menu li:first-child {
+	border: medium none;
+	padding-top: 30px;
+}
+
+#main-menu .sub-menu li a {
+	color: #777;
+	display: block;
+	font-size: 15px;
+	min-height: 24px
+}
+
+#main-menu .sub-menu li a:hover {
+	color: #eb592a
+}
+
+#main-menu .sub-menu .sub-menu {
+	-webkit-box-shadow: 0 1px 3px #ddd;
+	   -moz-box-shadow: 0 1px 3px #ddd;
+		-ms-box-shadow: 0 1px 3px #ddd;
+		    box-shadow: 0 1px 3px #ddd;	 
+	margin: -33px 0 0 140px;
+	padding-top: 0 !important;
+}
+
+#main-menu .sub-menu li:hover .sub-menu {
+	left: auto!important;
+}
+ 
+/* 5.2. Comments
+==================================== */
+
+#comments {
+	margin-top: 60px;
+}
+
+#comments.nocomments {
+	border-top: none;
+	margin-top: 0;
+}
+
+#comments > h2:first-child {
+	color: #E25527;
+	line-height: 36px;
+    margin: -48px 0 16px 0;
+    font-size: 46px;
+    font-weight: 700
+}
+
+#comments > nav {
+	margin: 12px 0;
+	overflow: hidden;
+}
+
+#comments > nav .nav-prev {
+	float: left;
+}
+
+#comments > nav .nav-next {
+	float: right;
+}
+
+#comments > ol {
+	list-style-type: none;
+	padding: 0;
+}
+
+#comments ol.children {
+	list-style-type: none;
+	margin-left: 5%;
+	padding: 0;
+}
+
+#comments li article {
+	clear: both;
+	margin-top: 20px;
+	position: relative;
+}
+
+#comments li article > aside {
+	border: 1px solid #eee;
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+			border-radius: 50%;
+	float: left;
+	left: 0px;
+	margin: 2px 20px 0 0;
+	padding: 9px;
+	position: absolute;
+	top: 5px;
+}
+
+#comments li article > aside img {
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+	   	    border-radius: 50%;
+	display: block;
+}
+
+#comments li article > .content {
+	margin-left: 80px;
+	overflow: hidden;
+	padding: 2px 3% 12px 3%;
+	position: relative;
+}
+
+#comments .children article > .content {
+	margin-left: 80px;
+}
+
+#comments article time {
+	color: #999;
+	font-size: 11px;
+	font-weight: normal;
+	line-height: 24px;
+	margin: 0 24px
+}
+
+#comments article .author {
+	font-size: 11px;
+	font-weight: normal;
+}
+
+#comments article .content > * {
+	font-size: 12px;
+}
+
+#comments article footer {
+	float: right;
+}
+
+#comments article footer .edit,
+#comments article footer .reply {
+	font-size: 12px;
+	font-weight: normal;
+	margin-left: 6px;
+}
+
+#comments em.awaiting-moderation {
+	color: #e25527;
+	display: block;
+	font-size: 14px;
+	margin: 0 0 12px 0;
+	text-align: center;
+}
+/* Special comments classes */
+#comments li.bypostauthor > article {
+	font-size: 12px;
+}
+
+#comments li.bypostauthor article .content {
+	border: none!important;
+}
+
+#comments li.bypostauthor article aside {
+	left: 2%;
+}
+
+#comments li.byuser article {}
+#comments li.odd article {}
+#comments li.even article {}
+
+/* Comments typography */
+#comments li article abbr[title],
+#comments li article acronym[title] {
+	border-bottom: 1px dotted;
+}
+
+#comments li article code {
+	background: #fafafa;
+	border-left: 4px solid #eee;
+	display: block;
+	margin: 10px 0;
+	padding: 10px 20px; 
+	word-spacing: normal;
+}
+
+#comments li article blockquote {
+	background: #fafafa;
+	border: 2px solid #eee;
+	border-left: none;
+	border-right: none;
+	display: block;
+	margin: 10px 0;
+	padding: 10px; 
+	position: relative;
+}
+
+#comments li article blockquote p {
+	margin: 0;
+}
+
+#comments li article q {
+	color: #888;
+	font-weight: bold;
+}
+
+#comments li article strike {
+	text-decoration: line-through;
+}
+
+#comments li article del {
+	color: #aaa;
+	text-decoration: line-through;
+}
+
+/* Comment form */
+#respond {
+	padding: 12px 0;
+}
+
+#respond > h3 {
+	color: #E25527;
+    line-height: 36px;
+    margin: 0 0 16px;
+    font-size: 46px;
+    font-weight: 700
+}
+
+#respond p {
+	margin-bottom: 3px;
+}
+
+#respond p.comment-notes,
+#respond p.logged-in-as,
+#respond p.form-allowed-tags {
+	font-size: 11px;
+	color: #999
+}
+
+#respond input {
+	display: block;
+}
+
+#respond input[type="text"],
+#respond input[type="password"],
+#respond textarea {
+	border: 1px solid #e7e7e7;
+	border-top-color: #ccc;
+	-webkit-box-shadow: inset 0 2px 4px #eee;
+	   -moz-box-shadow: inset 0 2px 4px #eee;
+			box-shadow: inset 0 2px 4px #eee;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+			border-radius: 3px;
+	font-size: 14px;
+	color: #555;
+	line-height: 31px;
+	padding: 4px 12px;	
+	-webkit-transition: all 0.30s ease-in-out;
+		   -moz-transition: all 0.30s ease-in-out;
+		    -ms-transition: all 0.30s ease-in-out;
+		 	 -o-transition: all 0.30s ease-in-out;
+		 		transition: all 0.30s ease-in-out;
+	width: 60%;
+	
+}
+
+#respond input[type="text"]:focus,
+#respond input[type="password"]:focus,
+#respond textarea:focus {
+	background: #fffef4;
+	border: 2px solid #5F9ED8;
+	box-shadow: 0 0 5px #5F9ED8;
+}
+
+#respond textarea {
+	display: block;
+	padding: 24px;
+	width: 100%;
+}
+
+#respond #reply-title small {
+	float: right;
+	font-size: 14px;
+	text-transform: none;
+}
+
+/* 5.3. Post meta-data
+==================================== */
+
+#gk-mainbody article > header h1 {
+	float: left;
+	line-height: 52px;
+	margin: 0 0 5px 120px;	
+}
+
+#gk-mainbody article > header h2 {
+	float: left;
+	line-height: 47px;
+	margin: 0 0 5px 120px;	
+}
+
+#gk-mainbody article.page > header h2 {
+    margin-left:0!important;
+}
+
+#gk-mainbody article > header dl {
+	margin-top: -20px;
+}
+
+article header {
+	position: relative;
+}
+
+article.post,
+article.page {
+	padding-bottom: 20px;
+}
+
+article.no-title,
+article.page-fullwidth {
+	margin-bottom: 0;
+	padding-left: 0;
+	padding-bottom: 0;
+}
+
+article.page-fullwidth > .content {
+	margin-bottom: -20px;
+	padding-top: 20px;
+}
+
+
+#gk-mainbody article.page-fullwidth > header h1,
+#gk-mainbody article.page-fullwidth > header h2 {
+	margin: 0;
+}
+
+
+article > footer {
+	border-top: 4px solid #f89a4f;
+	margin-top: 40px;
+	padding: 16px 0;
+}
+
+.page article > footer {
+	border-top: none!important;
+	margin-top: 0;
+	padding-top:0;
+}
+
+article > footer::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+article > .content,
+article > .summary {
+	clear: both;
+	font-size: 15px;
+	line-height: 26px;
+	padding-top: 25px;
+}
+
+time.entry-date {
+	background: #e25527;
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+			border-radius: 50%;
+	display: block;
+	float: left;
+	height: 52px;
+	left: 0;
+	margin-right: 116px;
+	padding: 18px;
+	position: absolute;
+	width: 52px;	
+}
+
+time.entry-date a {
+	color: #fff;
+	float:left;
+	font-size: 46px;
+	font-weight: 700;
+	line-height: 22px;
+	text-align: center;
+}
+
+time.entry-date span {
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+
+aside.meta {
+	float: left;
+	left: 0px;
+	position: relative;
+	width: 100%;
+	top: 24px;
+}
+
+.archive aside.meta,
+.category-page aside.meta,
+.author-page aside.meta,
+.search-page aside.meta {
+	top: 10px;
+}
+
+aside.meta dl {
+	clear: both;
+	margin: -25px 0 16px 120px;	
+}
+
+aside.meta dl:after {
+	clear:both;
+	content:"";
+	display:table;
+}
+
+aside.meta dt,
+aside.meta dd {
+	display: inline;
+	font-size: 14px;
+	line-height: 16px;
+	margin: 0;
+	text-align: right;
+}
+
+
+aside.meta dd:after {
+	color: #eee;
+	content: " | ";
+	display: inline;
+	margin: 0 6px;
+}
+
+aside.meta dd:last-child:after {
+	display: none;
+}
+
+aside.meta dt.date {
+	display: none;
+}
+
+
+#gk-social-api {
+	padding: 5px 0 50px 0;
+}
+
+#gk-social-api > * {
+	display: block;
+	float: left!important;
+	min-height: 33px;
+	margin-right: 0px!important;
+}
+
+#gk-social-api > a {
+	min-height: auto;
+}
+
+article dl.tags {
+	margin-top:15px;
+	margin-bottom: 0!important;
+	overflow: hidden;
+}
+
+article dl.tags a {
+	background: #f89a4f url(../images/style1/tags.png) no-repeat 0 0;
+	-webkit-border-radius: 0 2px 2px 0;
+	   -moz-border-radius: 0 2px 2px 0;
+			border-radius: 0 2px 2px 0;
+	color: #fff;
+	display: inline-block;
+	font: normal 11px/19px Arial, Helvetica, sans-serif !important;
+    height: 19px;
+    left: 0;
+    margin: 2px 3px 2px 0;
+    padding: 0 13px 0 23px;
+    position: relative;    
+    -webkit-transition: left 0.12s ease-out;
+       -moz-transition: left 0.12s ease-out;
+    	 -o-transition: left 0.12s ease-out;
+    		transition: left 0.12s ease-out;
+}
+
+article dl.tags a:hover {
+	background: #353639 url(../images/style1/tags.png) no-repeat 0 100%;
+	color: #fff;
+	left: -4px;
+	position: relative;
+}
+
+article dl.tags dt {
+	float: left;
+	font-size: 12px;
+	line-height: 26px;
+}
+
+article dl.tags dd {
+	padding-left: 65px;
+}
+
+article footer dl.tags dd {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+.comments > a {
+	background: url(../images/style1/comment.png) no-repeat 0 0;
+	color: #fff !important;
+	display: inline-block;
+	font-size: 11px;
+	font-weight: bold;
+	height: 21px;
+	margin-left: 8px;
+	position: relative;
+	text-align: center;
+ 	width: 21px;
+ }
+
+.comments > a:hover {
+	background-position: 0 100% !important
+}
+
+.bookmark,
+.edit {
+	display: inline;
+	font-size: 14px;
+	line-height: 17px;
+	margin: 0 10px 0 0;
+	text-align: left;
+}
+
+
+article section .bookmark > a,
+article section .edit > a {
+	color: #e25527;
+}
+
+article section .bookmark > a:hover,
+article section .edit > a:hover {
+	color: #353639;
+}
+
+
+/* 5.4. Post additional features
+==================================== */
+
+article header h1 sup,
+article.sticky header h1 sup,
+article header h2 sup,
+article.sticky header h2 sup {
+	background: #CB4900;
+	color: #fff;
+	font-size: 13px;
+	font-weight: 300;
+	padding: 0 6px;
+	top: -2.5em;   
+}
+
+article figure.featured-image img {
+	height: auto;
+	margin: 9px auto 10px auto;
+	max-width: 100%;
+	position: relative;
+	padding-top: 40px;
+}
+
+.alignnone {
+	float: none;
+}
+
+.alignleft {
+	float: left;
+	margin: 0 15px 15px 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 15px 15px;
+}
+
+.aligncenter {
+	display: block;
+	float: none;
+	margin: 0 auto;
+}
+
+.wp-caption-text {
+	font-size: 11px;
+	font-style: italic;
+	line-height: 1.5;
+	text-align: center;
+}
+
+div.wp-caption {
+	max-width: 100%!important;
+}
+
+.gallery {
+	clear: both;
+	padding: 16px 0;
+}
+
+.gallery-caption {
+	font-size: 10px;
+}

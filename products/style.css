@@ -1,0 +1,46 @@
+body{
+	background:#F9F9F9;
+}
+
+#container{
+	width:100%;
+	}
+
+#gallery{
+}
+
+#gallery > a > img{
+	width:206px;
+	height:206px;
+	margin-left:11px;
+	margin-top:11px;
+	
+}
+
+#gallery > a:hover{
+	opacity:0.77;
+}
+
+
+/*header{
+	width:672px;
+	margin:30px auto;
+}
+
+header h1 span{
+	display:block;
+	font-size:14px;
+}
+
+section{width:672px;margin:20px auto;background:rgba(255,255,255,.7);border-radius:8px}
+#gallery{padding:10px}
+#gallery ul{
+	list-style-type:none;
+}
+#gallery ul li{
+	display:inline-block;
+	padding:5px;
+}
+#gallery ul li img:hover{
+	opacity:0.8;
+}*/

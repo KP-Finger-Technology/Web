@@ -1,0 +1,563 @@
+/**
+ *
+ * -------------------------------------------
+ * Mobile CSS file
+ * -------------------------------------------
+ * 
+ **/
+ 
+/*
+ *
+ * 11. Mobile code
+ *
+ *
+------------------------------------ */
+ 
+/* 11.1. Base elements
+==================================== */ 
+
+body {
+	font-size: 13px;
+}
+
+#gk-header {
+	margin: 0!important;
+}
+
+section.intro {
+	font-size: 14px;
+}
+
+/* archive / page 404 */
+.page404 .widget,
+.archivepage .widget {
+	margin: 0!important;
+	width: 100%!important;
+}
+
+/* images fix */
+#gk-mainbody img {
+	height: auto!important;
+	max-width: 100%!important;
+}
+
+h1.page-title {
+	font-size: 40px;
+	line-height: 45px;
+}
+
+h2.page-title {
+	font-size: 35px;
+	line-height: 40px;
+}
+
+/* tables fix */
+#gk-mainbody table:before {
+	content: "Scroll horizontally to view the whole table";
+	display: block;
+	font-family: Arial, sans-serif;
+	font-size: 10px;
+	margin-top: -30px;
+	margin-bottom: 10px;
+	height: 14px;
+	width: 100%;	
+}
+
+#gk-mainbody table {
+	display: block;
+	overflow: scroll;
+	padding: 30px 0 20px 0; /* padding for the scrollbars and the top message */
+	width: 540px;
+}
+
+.gk-page + .gk-page-wrap {
+	padding-top: 30px;
+}
+
+#gk-mainbody table tr {
+	display: table;
+	width: 540px;
+}
+
+/* Top menu */
+#gk-top-menu {
+	left: -15px;
+	margin: 0!important;
+	padding: 0 22px 0 8px;
+	right: 0;
+	top: 0px;
+	width: 100%;
+}
+
+#gk-top-menu ul {
+	float: none;
+}
+
+#gk-top-menu li {
+	font-size: 12px;
+	line-height: 20px;
+}
+
+#gk-user-area {
+	float: right;
+}
+
+#gk-head h1 {
+	margin-top: 12px;
+}
+
+#gk-top-menu::before {
+	display: none!important;
+}
+
+#gk-user-area::after {
+	display: none;
+}
+
+#gk-head a.cssLogo {
+	background-size: 80%;
+	background-position: 0 center;
+	margin-left: -20px;
+	width: 300px;
+}
+
+/* Top and bottom widgets */
+
+#gk-top1 .box:first-child
+#gk-bottom1 .box:first-child {
+	padding: 0 20px!important;
+}
+
+#gk-top1 .box,
+#gk-bottom1 .box {
+	padding-left: 20px!important;
+}
+
+#gk-top2 .box {
+	padding: 0 10px!important;
+}
+
+#gk-top1 .box:before,
+#gk-bottom1 .box:before {
+	background: none!important;
+}
+
+/* column rules */
+#gk-sidebar {
+	padding: 20px 0!important;
+}
+
+#gk-sidebar .box {
+	float: none!important;
+	width: 100%!important;
+}
+
+.widget-area .col1,
+.widget-area .col2,
+.widget-area .col3,
+.widget-area .col4,
+.widget-area .col5,
+.widget-area .col6,
+.widget-area .box.last1,
+.widget-area .box.last2,
+.widget-area .box.last3,
+.widget-area .box.last4,
+.widget-area .box.last5 { 
+	float: left!important;
+	margin: 0 auto 20px auto!important; 
+	width: 100%; 
+}
+
+.widget-area .nth1,
+.widget-area .nth2,
+.widget-area .nth3,
+.widget-area .nth4,
+.widget-area .nth5,
+.widget-area .nth6 {
+	clear: both;
+}
+
+.gk-columns[data-column-count="2"] > div,
+.gk-columns[data-column-count="3"] > div {
+	margin: 5px 0;
+	padding: 0;
+	width: 100%;
+}
+
+.gk-columns[data-column-count="4"] > div {
+	margin: 5px 0;
+	padding: 0;
+	width: 50%;
+}
+
+#gk-head h1 {
+	width: 100%!important;
+}
+
+/* 11.2. Header elements
+==================================== */
+
+/* Big tabs header */
+.gk-tabs-wrap > ol {
+	text-align: center!important;
+}
+
+.box.big-tabs .gk-tabs-wrap > ol li {
+	display: inline-block;
+	float: none;
+	margin: -80px -17px 0px -14px!important;
+	-webkit-transform: scale(0.5,0.5);
+	   -moz-transform: scale(0.5,0.5);
+		-ms-transform: scale(0.5,0.5); 
+	 	 -o-transform: scale(0.5,0.5);
+			transform: scale(0.5,0.5);
+}
+
+.gk-tabs-wrap > ol {
+	overflow: visible!important;
+}
+
+div.gk-tab {
+	margin: 0 30px 0 0;
+	-webkit-transform: scale(0.8,0.8);
+	   -moz-transform: scale(0.8,0.8);
+		-ms-transform: scale(0.8,0.8); 
+	 	 -o-transform: scale(0.8,0.8);
+			transform: scale(0.8,0.8);
+}
+
+h2.gk-tab {
+	font-size: 36px;
+	padding-bottom: 0;
+}
+
+p.gk-tab {
+	font-size: 14px;
+}
+
+.box.big-tabs .gk-tabs-container {
+	padding: 15px 25px;
+}
+
+/* GK Image Show */
+.gk-is-wrapper-gk_appsprotech .gk-is-pagination > ol li a { 
+	border: 1px solid #fff;
+	height: 10px;
+	margin: 1px;
+	width: 10px;
+}
+
+.gk-is-wrapper-gk_appsprotech .gk-is-pagination > ol li {
+	height: 14px;
+	margin-left: 5px;
+	width: 14px;
+}
+
+.gk-is-wrapper-gk_appsprotech .gk-is-pagination > ol li.active a,
+.gk-is-wrapper-gk_appsprotech .gk-is-pagination > ol li:hover a { 
+	height: 13px;
+	margin: 0;
+	width: 13px;
+}
+
+.gk-is-wrapper-gk_appsprotech .gk-is-pagination > ol {
+	padding: 18px 0 0 0;
+}
+
+.gk-is-wrapper-gk_appsprotech .gk-is-text h2 a {
+	font-size: 36px;
+}
+
+.gk-is-wrapper-gk_appsprotech .gk-is-text p {
+	font-size: 16px;
+}
+
+.gk-is-wrapper-gk_appsprotech .gk-is-prev,
+.gk-is-wrapper-gk_appsprotech .gk-is-next {
+	-webkit-transform: scale(0.5,0.5);
+	   -moz-transform: scale(0.5,0.5);
+		-ms-transform: scale(0.5,0.5); 
+	 	 -o-transform: scale(0.5,0.5);
+			transform: scale(0.5,0.5);
+}
+
+.gk-is-wrapper-gk_appsprotech .gk-is-prev:hover,
+.gk-is-wrapper-gk_appsprotech .gk-is-next:hover { 
+	-webkit-transform: scale(0.6); 
+	   -moz-transform: scale(0.6); 
+	    -ms-transform: scale(0.6); 
+	     -o-transform: scale(0.6); 
+	        transform: scale(0.6); 
+}
+
+.gk-is-wrapper-gk_appsprotech .gk-is-next {
+	right: -15px!important;
+}
+
+.gk-is-wrapper-gk_appsprotech .gk-is-prev {
+	left: -15px!important;
+}
+
+.gk-is-wrapper-gk_appsprotech .gk-is-slide {
+	left: 53%;
+}
+
+#gk-mainmenu.search-exists {
+	float: none;
+}
+
+#gk-mainmenu-wrap {
+	height: 25px;
+}
+
+#main-menu-mobile {
+	top: -83px;
+}
+
+#top-menu {
+	display: none;
+}
+
+#top-menu-mobile {
+	background: transparent url(../images/style1/mobile_menu.png) no-repeat right center;
+	border: none;
+	float: left;
+	height: 36px;
+	left: auto;
+	position: relative;
+	top: -4px;
+	width: 30px;
+}
+
+#top-menu-mobile > select {
+	border: 1px solid #fff;
+	filter: alpha(opacity=0);
+	height: 48px!important;
+	opacity: 0;
+	width: 48px;
+}
+
+
+#gk-search {
+	margin-top: -50px!important;
+}
+
+/* GK Tabs */
+.gk-tabs-wrap > ol li {
+	float: none;
+	display: block;
+	margin: 5px 0 0;
+}
+
+/* 11.3. Posts
+==================================== */
+
+.template-latest article > header h2,
+#gk-mainbody article > header h2 {
+	margin-left: 0!important;
+}
+
+.entry-date {
+	display: none!important;
+}
+
+article > header h1,
+article > header h2 {
+	font-size: 36px;
+	line-height: 38px!important;
+	margin: 0!important;
+}
+
+article.post, 
+article.page {
+	padding-left: 0!important;
+}
+
+article > .content,
+article > .summary {
+	font-size: 13px;
+}
+
+article header h1 sup,
+article.sticky header h1 sup,
+article header h2 sup,
+article.sticky header h2 sup {
+	top: -1.5em;
+}
+
+aside.meta {
+	top: 32px!important;
+	width: 100%;
+}
+
+aside.meta dl,
+aside.meta dl {
+	font-size: 11px!important;
+	line-height: 19px!important;
+	margin-left: 0!important;
+}
+
+article dl.tags dd {
+	clear: both;
+	margin-left: 5px;
+	padding-left: 0;
+}
+
+aside.meta dd.edit,
+aside.meta dd.bookmark {
+	display: none;
+}
+
+.archivepage h2 {
+	font-size: 36px;
+}
+
+#gk-social-api {
+	overflow-x: hidden;
+}
+
+.gk-format-aside,
+.gk-format-audio,
+.gk-format-chat,
+.gk-format-gallery,
+.gk-format-image,
+.gk-format-link,
+.gk-format-quote,
+.gk-format-status,
+.gk-format-video {
+	display: none!important;
+}
+
+.author-info .author-desc {
+	 font-size: 11px;
+}
+
+/* Gallery Page */
+#gallery figcaption {
+	display: none;
+}
+
+#gallery ol li {
+	border: 1px solid #eee;
+	height: 7px;
+	width: 8px;
+}
+
+#gallery ol li:hover,
+#gallery ol li.active {
+	border: 1px solid #eee;
+}
+
+#gallery ol {
+	top: 5px;
+}
+
+/* Comments */
+
+#comments {
+	margin-left: 0!important;
+}
+
+.comments > a {
+	margin-left: 3px;
+}
+
+#comments > h2:first-child,
+#respond > h3  {
+	font-size: 36px;
+}
+
+#comments li article > .content {
+	margin-left: 0;
+}
+
+#comments li article > aside {
+	position: relative;
+}
+
+#comments article time {
+	margin: 0 5px;
+}
+
+#comments .children article > .content {
+	margin-left: 0;
+}
+
+#respond input[type="text"],
+#respond input[type="password"],
+#respond textarea {
+	width: 240px;
+}
+
+/* NSP */
+
+.gk-nsp-arts-nav {
+	top: -15px;
+}
+
+/* Author Info */
+.author-info {
+	padding: 10px;
+}
+
+.author-info > div {
+	margin: 5px;
+}
+
+.author-info > aside {
+	-webkit-border-radius: 50%;
+	   -moz-border-radius: 50%;
+			border-radius: 50%;
+	border: 2px solid #eee;
+	float: left;
+	max-width: 55px;
+	margin: 10px 10px 0 0;
+	padding: 6px;
+}
+
+
+/* 11.4. Other elements
+==================================== */
+
+/* Footer */
+
+#footer-menu {
+	float: none;
+	text-align: center;
+	width: 100%;
+}
+
+#footer-menu li {
+	display: block;
+	float: none!important;
+	text-align: center;
+}
+
+.gk-copyrights {
+	margin-top: 130px;
+	width: 100%;
+}
+
+#gk-social-icons {
+	text-align: center;
+}
+
+
+/* 11.5. Device classes
+==================================== */
+
+.onlyDesktop {
+	display: none!important;
+}
+
+.onlyTablets {
+	display: none!important;
+}
+
+.onlySmartphones {
+	display: block!important;
+}
+
+.onlyTabltetsAndSmartphones {
+	display: block!important;
+}

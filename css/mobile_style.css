@@ -1,0 +1,69 @@
+@media screen and (max-width: 767px) { 
+	#templatemo-carousel {
+		height:100%;
+		display: none;
+	}
+
+	#templatemo-carousel .carousel-inner > .item > a > img {
+	    /*background: url('../images/templatemo_carousel_bg.jpg') no-repeat center center fixed;*/ 
+	    -webkit-background-size: 100%;
+	    -moz-background-size: 100%;
+	    -o-background-size: 100%;
+	    background-size: contain;
+	    overflow-x: hidden;
+	    margin-bottom:0;
+	    height: auto;
+		padding: 10px;
+	}
+
+	.carousel-indicators{
+		display: none;
+	}
+
+	.carousel-control{
+		display:none;
+	}
+
+	#templatemo-carousel .item {
+		/*height: auto;
+		min-height: 50vh;*/
+	}
+
+	#set-1 {
+		display: none;
+	}
+
+	#mb, #des, #wd {
+		display: block;
+	}
+
+	.gkTab-1 {
+		width:30%;
+		height: auto;
+	}
+
+	.accordion-group {
+  		padding: 0 15px;
+	}
+
+
+
+	
+	.tag-head hr {
+	    width:30%;
+	}
+
+	.tag-head {
+	    text-align: center;
+	    padding: 0 30px;
+	}
+
+	.txt_dark {
+	    width: 35%
+	}
+}
+
+
+@media screen and (max-width: 992px) {
+	
+} 
