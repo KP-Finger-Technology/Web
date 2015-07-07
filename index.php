@@ -33,11 +33,6 @@
         
 		<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
 		
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
         <style type="text/css">
 			#gkTab-392 .gkTabContainer0, #gkTab-392 .gkTabContainer1, #gkTab-392 .gkTabContainer2{
 				height: 300px;
@@ -109,39 +104,16 @@
 				document.getElementById("des").hidden=true;
 				document.getElementById("mb").hidden=false;
 				document.getElementById("wd").hidden=true;
-//				ajax("tet1x","mb.php");
-//				document.getElementById("tet1x").innerHTML="Mobile";
-				//var x=document.getElementById("txtTitle1");
-//				var y=document.getElementById("txtContent1");
-//				$("#t1").addClass("gkTab-1");
-//				$("#t1").removeClass("gkTab-2");
-//				$("#t1").removeClass("gkTab-3");
-//				$("#tet1").text(x.value);
-//				$("#test1").text(y.value);
 			  });
 			  $("#btn2").hover(function(){
 				document.getElementById("des").hidden=false;
 				document.getElementById("mb").hidden=true;
 				document.getElementById("wd").hidden=true;
-//				var x1=document.getElementById("txtTitle2");
-//				var y1=document.getElementById("txtContent2");
-//				$("#t1").addClass("gkTab-2");
-//				$("#t1").removeClass("gkTab-1");
-//				$("#t1").removeClass("gkTab-3");
-//				$("#tet1").text(x1.value);
-//				$("#test1").text(y1.value);
 			  });
 			  $("#btn3").hover(function(){
 				document.getElementById("des").hidden=true;
 				document.getElementById("mb").hidden=true;
 				document.getElementById("wd").hidden=false;
-//				var x1=document.getElementById("txtTitle3");
-//				var y1=document.getElementById("txtContent3");
-//				$("#t1").addClass("gkTab-3");
-//				$("#t1").removeClass("gkTab-2");
-//				$("#t1").removeClass("gkTab-1");
-//				$("#tet1").text(x1.value);
-//				$("#test1").text(y1.value);
 			  });
 			});
 			function ajax(spanID,address)
@@ -197,8 +169,6 @@
 	}
 	
 </style>
-	
-		
 		<script type="text/javascript">
 		var thickboxL10n = {
 			"next":"Next >",
@@ -246,7 +216,6 @@
 					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
 					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
 				});
-
 				$('.non-retina').colorbox({rel:'group5', transition:'none'})
 				$('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
 				
@@ -264,14 +233,6 @@
        <div class="templatemo-top-bar" id="templatemo-top">
            <div class="container">
                 <div class="subheader">
-                    <!--<div id="phone" class="pull-left">
-                            <img src="images/phone.png" alt="phone"/>
-                            010-020-0340
-                    </div>
-                    <div id="email" class="pull-right">
-                           <img src="images/email.png" alt="email"/>
-                            contact@fingertech.com
-                    </div>-->
                 </div>
             </div>
         </div>
@@ -290,19 +251,6 @@
                                 </button>
                                 
                         </div>
-                        <!--<div class="navbar-collapse collapse" id="templatemo-nav-bar">
-                            <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;margin-right:75px;">
-                                <li><a href="#templatemo-top"><strong>HOME</strong></a></li>
-                                <li><a href="#templatemo-welcome"><strong>ABOUT</strong></a></li>
-                                <li><a href="#templatemo-products"><strong>PRODUCTS</strong></a></li>
-                                <li><a href="#templatemo-about"><strong>SERVICES</strong></a></li>
-                                <li><a href="#templatemo-career"><strong>CAREER</strong></a></li>
-                                <li><a href="#templatemo-contact"><strong>CONTACT</strong></a></li>
-                            </ul>
-							<ul class="nav navbar-na navbar-right" style="margin-top:-39px;float:right;margin-left:100px;">
-							<li><a href="blog.php" ><strong>BLOG</strong></a></li>
-							</ul>
-                        </div>--><!--/.nav-collapse -->
                         <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;margin-right:75px;">
                                 <li><a href="#templatemo-top"><strong>HOME</strong></a></li>
@@ -381,10 +329,6 @@
             <div class="container">
                 <div class="row">
                     <div class="templatemo-line-header" >
-                        <!--div class="text-center">
-                            <hr class="team_hr team_hr_left hr_gray"/><span class="txt_darkgrey">OUR PRODUCTS</span>
-                            <hr class="team_hr team_hr_right hr_gray" />
-                        </div-->
                         <div class="text-center tag-head">
                             <hr class="team_hr2 team_hr_left2 hr_gray"/>
                             <!--span class="txt_darkgrey">CONTACT US</span-->	
@@ -432,10 +376,6 @@
              <div class="container">
              	<div class="row">
                     <div class="templatemo-line-header" >
-                        <!--div class="text-center">
-                            <hr class="team_hr team_hr_left hr_gray"/><span class="txt_darkgrey">WHAT WE DO?</span>
-                            <hr class="team_hr team_hr_right hr_gray" />
-                        </div-->
                         <div class="text-center tag-head">
                             <hr class="team_hr2 team_hr_left2 hr_gray"/>
                             <!--span class="txt_darkgrey">CONTACT US</span-->	
@@ -619,61 +559,15 @@
                         </div>
                     </div>
                 </div><!-- end of the .gk-page-wrap section -->	
-<!--[if IE 8]>
-<div class="ie8clear"></div>
-<![endif]-->
 
-</div>				<!-- /.row -->
-                <!--<div class="row">
-                    <div class="col-md-4">
-                        <div class="templatemo-services-item">
-                            <div class="img">
-                                <a href="#templatemo-service1"><img src="images/button ipod.png" alt="icon" onmouseover="this.src='images/button_ipod_press.png'" onmouseout="this.src='images/button ipod.png'"/></a>
-                                <span class="templatemo-service-item-header">MOBILE APPS</span>
-                            </div>
-                            <p><strong>MOBILE APPS</strong></p>
-                            <br class="clearfix"/>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    
-                    <div class="col-md-4">
-                        <div class="templatemo-services-item" >
-                            <div>
-                                 <a href="#templatemo-service2"><img src="images/button desktop.png" alt="icon" onmouseover="this.src='images/button desktop_pressed.png'" onmouseout="this.src='images/button desktop.png'"/></a>
-                                <span class="templatemo-service-item-header">DESKTOP APPS</span>
-                            </div>
-                            <p><strong>DESKTOP APPS</strong></p>
-                            <br class="clearfix"/>
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="col-md-4">
-                        <div class="templatemo-services-item">
-                            <div>
-                                <a href="#templatemo-service3"><img src="images/button internet.png" alt="icon" onmouseover="this.src='images/button internet_pressed.png'" onmouseout="this.src='images/button internet.png'"/></a>
-                                <span class="templatemo-service-item-header">WEB DESIGN</span>
-                            </div>
-                            <p><strong>WEB DESIGN</strong></p>
-                            <br class="clearfix"/>
-                        </div>
-                        <br class="clearfix"/>
-                    </div>
-                </div>-->
+</div>
             </div>
         </div><!-- /.templatemo-team -->
-          
-        <!-- /.services-->
-        
+		
         <div class="templatemo-team2" id="templatemo-career">
                 <div class="container">
         	<div class="row">
             	<div class="templatemo-line-header" >
-                	<!--div class="text-center">
-                    	<hr class="team_hr team_hr_left hr_gray"/><span class="txt_darkgrey">CAREER</span>
-                        <hr class="team_hr team_hr_right hr_gray" />
-                    </div-->
                     <div class="text-center tag-head">
                             <hr class="team_hr2 team_hr_left2 hr_gray"/>
                             <!--span class="txt_darkgrey">CONTACT US</span-->	
@@ -716,49 +610,6 @@
                         </div>
                     </div>
                     
-                    <!--<div class="accordion-group">
-                        <div class="accordion-heading accordionize">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionArea" href="#twoArea">
-                            SENIOR
-                            <span class="font-icon-arrow-simple-down"></span>
-                        </a>
-                        </div>
-                        <div id="twoArea" class="accordion-body collapse">
-                            <div class="accordion-inner">
-                            <?php
-								//$seniorSql = "SELECT * FROM pagecareer WHERE category='SENIOR' ORDER BY careerid ASC";
-								//$seniorQry = mysql_query($seniorSql, $koneksi) or die ("Query career salah : ".mysql_error());
-								
-									//while ($seniorRow = mysql_fetch_array($seniorQry)) {
-									//echo $seniorRow['content'];
-									//}
-							?>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="accordion-group">
-                        <div class="accordion-heading accordionize">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionArea" href="#threeArea">
-                            WEB DEVELOPER
-                            <span class="font-icon-arrow-simple-down"></span>
-                        </a>
-                        </div>
-                        <div id="threeArea" class="accordion-body collapse">
-                            <div class="accordion-inner">
-                            <?php
-								//$websSql = "SELECT * FROM pagecareer WHERE category='WEB' ORDER BY careerid ASC";
-								//$websQry = mysql_query($websSql, $koneksi) or die ("Query career salah : ".mysql_error());
-								
-									//while ($websRow = mysql_fetch_array($websQry)) {
-									//	echo $websRow['content'];
-									//}
-							?>
-                            </div>
-                        </div>
-                    </div>
-            	</div>-->
-                <!-- End Accordion -->
         	</div>            
         </div>
 
@@ -780,15 +631,7 @@
                             </div>
                         </div>			
                     </div>
-                    
-					<!--<div class="templatemo-welcome" id="templatemo-welcome">
-						<div class="container">
-							<div class="templatemo-slogan text-center">
-								<span class="txt_darkgrey">HAVE A PROJECT IN MIND</span><span class="txt_orange">?</span>
-								<p class="txt_slogan"><i>LETS CHAT!</i></p>
-							</div>	
-						</div>
-					</div>-->
+					
                     <div class="col-md-8">
                         <div class="templatemo-contact-map" id="map-canvas"> </div>  
                         <div class="clearfix"></div>
@@ -886,7 +729,3 @@
 <script src="colorbox_appspro/js/jquery.colorbox_1.js"></script>
 </div>
 </html>
-<!-- 
-    Free Responsive Template from templatemo
-    http://www.templatemo.com
--->
