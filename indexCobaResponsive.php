@@ -276,108 +276,122 @@
         <div>
             <!-- Carousel -->
             <div id="templatemo-carousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#templatemo-carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#templatemo-carousel" data-slide-to="1"></li>
-                    <li data-target="#templatemo-carousel" data-slide-to="2"></li>
+                <!-- Menambahkan indikator carousel di bagian bawah gambar-->
+				<ol class="carousel-indicators">
+                    <li data-target="#templatemo-carousel" data-slide-to="0" class="active"/>
+                    <li data-target="#templatemo-carousel" data-slide-to="1"/>
+                    <li data-target="#templatemo-carousel" data-slide-to="2"/>
                 </ol>
+				
+				<!--  Gambar-gambar carousel -->
 				<div class="carousel-inner">
-				<div class="item active"><a href="#templatemo-welcome"><img src="images/slide_1.jpg" /></a>
+					<div class="item active">
+						<a href="#templatemo-welcome"><img src="images/slide_1.jpg"/></a>
 					</div>
 					
-					<div class="item"><a href="#templatemo-products"><img src="images/slide_2.jpg" /></a>
+					<div class="item">
+						<a href="#templatemo-products"><img src="images/slide_2.jpg"/></a>
 					</div>
-					<div class="item"><a href="#templatemo-about"><img src="images/slide_3.jpg" /></a>
+					
+					<div class="item">
+						<a href="#templatemo-about"><img src="images/slide_3.jpg"/></a>
 					</div>
                 </div>
+				
                 <a class="left carousel-control" href="#templatemo-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
                 <a class="right carousel-control" href="#templatemo-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
             </div><!-- /#templatemo-carousel -->
         </div>
         
+		<!-- Judul -->
         <div class="templatemo-welcome" id="templatemo-welcome">
             <div class="container">
                 <div class="templatemo-slogan text-center">
-                    <span class="txt_darkgrey">Welcome to </span><span class="txt_orange">Finger Tech</span>
+                    <span class="txt_darkgrey">Welcome to </span>
+					<span class="txt_orange">Finger Tech</span>
                     <p class="txt_slogan"><i>Simplify your business just a finger tap away.</i></p>
                 </div>	
             </div>
         </div>
         
+		<!-- Menu About -->
         <div class="templatemo-service">
             <div class="container">
                 <div class="row">
-                <?php
-					$aboutSql = "SELECT * FROM pageabout ORDER BY aboutid ASC";
-                    $aboutQry = mysql_query($aboutSql, $koneksi) or die ("Query about salah : ".mysql_error());
-                    
-                    while ($aboutRow = mysql_fetch_array($aboutQry)) {
-				?>
-                    <div class="col-md-4">
-                        <div class="templatemo-service-item">
-                            <div>
-                                <img src="images/<?php echo $aboutRow['picture']; ?>" alt="icon" />
-                                <span class="templatemo-service-item-header"><?php echo $aboutRow['tittle']; ?></span>
-                            </div>
-                            <p><?php echo $aboutRow['content']; ?></p>
-                            <br class="clearfix"/>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                  <?php
-					}
-				  ?>
+					<?php
+						$aboutSql = "SELECT * FROM pageabout ORDER BY aboutid ASC";
+						$aboutQry = mysql_query($aboutSql, $koneksi) or die ("Query about salah : ".mysql_error());
+						
+						while ($aboutRow = mysql_fetch_array($aboutQry)) {
+					?>
+						<!-- Menambahkan kata pengantar Expertise, Fully Responsive, dan High Efficiency -->
+							<div class="col-md-4">
+								<div class="templatemo-service-item">
+									<div>
+										<img src="images/<?php echo $aboutRow['picture']; ?>" alt="icon"/>  <!-- Gambar -->
+										<span class="templatemo-service-item-header"><?php echo $aboutRow['tittle']; ?></span> <!-- Judul gambar -->
+									</div>
+									
+									<!-- Text -->
+									<p><?php echo $aboutRow['content']; ?></p>
+								</div>
+							</div>
+					<?php
+						}
+					?>
             	</div>
         	</div>
 
-        <div id="templatemo-products" ><!-- /.product- -->
+		<!-- Menu Products -->
+        <div id="templatemo-products" >
             <div class="container">
                 <div class="row">
                     <div class="templatemo-line-header" >
                         <div class="text-center tag-head">
-                            <hr class="team_hr2 team_hr_left2 hr_gray"/>
-                            <!--span class="txt_darkgrey">CONTACT US</span-->	
+                            <hr class="team_hr2 team_hr_left2 hr_gray"/>	
                             <div class="txt_dark text-center">OUR PRODUCTS</div>
                             <hr class="team_hr2 team_hr_right2 hr_gray"/>
-                            <div class="clearfix"></div>
                         </div>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="templatemo-gallery-category" style="font-size:16px; margin-top:10px;">
                     </div>
                 </div> <!-- /.row -->
 
-
-                <div class="clearfix"></div>
-                <div class="text-center">
-                    
-                </div>
-                <div class="clearfix"></div>
                 <div class="row text-center">
                     <!-- Carousel -->
                     <section id="dg-container" class="dg-container">
-                    <div class="dg-wrapper">
-                    <?php
-						$productsSql = "SELECT * FROM pageproducts ORDER BY productsid ASC";
-						$productsQry = mysql_query($productsSql, $koneksi) or die ("Query products salah : ".mysql_error());
+						<div class="dg-wrapper">
+							<?php
+								$productsSql = "SELECT * FROM pageproducts ORDER BY productsid ASC";
+								$productsQry = mysql_query($productsSql, $koneksi) or die ("Query products salah : ".mysql_error());
+							
+								while ($productsRow = mysql_fetch_array($productsQry)) {
+							?>
+									<a class="iframe" href="products.php?Product_id=<?php echo $productsRow['productsid']; ?>" data-group="gallery-graphic" title="<?php echo $productsRow['content']; ?>">
+										<!-- Gambar -->
+										<img src="images/<?php echo $productsRow['picture']; ?>" alt="image01" width="481px" height="316px">
+										
+										<!-- Judul gambar -->
+										<div>
+											<p style = "margin-bottom:-30px">
+												<?php echo $productsRow['content'];?>
+											</p>
+										</div>
+									</a>
+							<?php
+								}
+							?>
+						</div>
 						
-							while ($productsRow = mysql_fetch_array($productsQry)) {
-					?>
-                        <a class="iframe" href="products.php?Product_id=<?php echo $productsRow['productsid']; ?>" data-group="gallery-graphic" title="<?php echo $productsRow['content']; ?>"><img src="images/<?php echo $productsRow['picture']; ?>" alt="image01" width="481px" height="316px"><div><?php echo $productsRow['content']; ?></div></a>
-                    <?php
-							}
-					?>
-                    </div>
-                    <nav>	
-                        <span class="dg-prev">&lt;</span>
-                        <span class="dg-next">&gt;</span>
-                    </nav>
-                </section>
+						<!-- Tombol navigasi kiri dan kanan -->
+						<nav>	
+							<span class="dg-prev">&lt;</span>
+							<span class="dg-next">&gt;</span>
+						</nav>
+					</section>
                 </div>
             </div><!-- /.container -->
         </div> <!-- /.product-portfolio -->
-                    
+		
+		<!-- Menu Services -->
         <div class="templatemo-team" id="templatemo-about">
              <div class="container">
              	<div class="row">
