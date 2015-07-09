@@ -396,6 +396,7 @@
 			<!-- Menu Services -->	
 			<div class="templatemo-team" id="templatemo-about">
 				<div class="container">
+					<!-- Judul -->
 					<div class="row">
 						<div class="templatemo-line-header" >
 							<div class="text-center tag-head">
@@ -406,6 +407,7 @@
 						</div>
 					</div>
 					
+					<!-- Isi -->
 					<div class="container">
 						<section id="set-1">
 							<div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
@@ -602,66 +604,71 @@
 			</div>
 		</div><!-- /.templatemo-team -->
 		
+		<!-- Menu Career -->
         <div class="templatemo-team2" id="templatemo-career">
-                <div class="container">
-        	<div class="row">
-            	<div class="templatemo-line-header" >
-                    <div class="text-center tag-head">
-                            <hr class="team_hr2 team_hr_left2 hr_gray"/>
-                            <!--span class="txt_darkgrey">CONTACT US</span-->	
-                            <div class="txt_dark text-center">CAREER</div>
-                            <hr class="team_hr2 team_hr_right2 hr_gray"/>
-                            <div class="clearfix"></div>
-                        </div>
+			<div class="container">
+				<!-- Judul -->
+				<div class="row">
+					<div class="templatemo-line-header" >
+						<div class="text-center tag-head">
+								<hr class="team_hr2 team_hr_left2 hr_gray"/>
+								<div class="txt_dark text-center">CAREER</div>
+								<hr class="team_hr2 team_hr_right2 hr_gray"/>
+							</div>
+					</div>
                 </div>
-        	<div class="clearfix"></div>
-                </div>
-            <div class="col-md-12">
-            	<div class="templatemo-service-items" >
-					<p>We’re currently looking for a person to be part of our team. If you’re all about great tech, love new ideas and fast learner, maybe you’re the one we’re looking for.  Drop us an email of your resume & portfolio to 
-<strong>hrd@finger-technology.com.</strong></p>
-                    <br class="clearfix"/>
-              	</div>
-            </div>
-           	<div class="templatemo-gallery-category" style="font-size:16px; margin-top:80px;">
-            </div>
+				
+				<!-- Deskripsi -->
+				<div class="col-md-12">
+					<div class="templatemo-service-items" >
+						<p>
+							We’re currently looking for a person to be part of our team. If you’re all about great tech, love new ideas and fast learner, maybe you’re the one we’re looking for.  Drop us an email of your resume & portfolio to
+							<strong>hrd@finger-technology.com.</strong>
+						</p>
+					</div>
+				</div>
             </div> <!-- /.row -->
-                    <div class="accordion-group">
-                        <div class="accordion-heading accordionize">
-                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionArea" href="#oneArea">
-                                JOB POSITION AVAILABLE
-                                <span class="font-icon-arrow-simple-down"></span>
-                            </a>
-                        </div>
-                        <div id="oneArea" class="accordion-body collapse">
-                        
-                            <div class="accordion-inner">
-                            <?php
-							$juniorSql = "SELECT * FROM pagecareer ORDER BY careerid ASC";
-							$juniorQry = mysql_query($juniorSql, $koneksi) or die ("Query career salah : ".mysql_error());
-							
-								while ($juniorRow = mysql_fetch_array($juniorQry)) {
-                                	echo $juniorRow['content'];
-								}
-							?>
-                            </div>
-                        </div>
-                    </div>
+			
+			<!-- Job Position Available -->
+			<div class="accordion-group">
+				<!-- Judul -->
+				<div class="accordion-heading accordionize">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionArea" href="#oneArea">
+						JOB POSITION AVAILABLE
+						<span class="font-icon-arrow-simple-down"/>
+					</a>
+				</div>
+				
+				<!-- Isi -->
+				<div id="oneArea" class="accordion-body collapse">
+					<div class="accordion-inner">
+						<?php
+						$juniorSql = "SELECT * FROM pagecareer ORDER BY careerid ASC";
+						$juniorQry = mysql_query($juniorSql, $koneksi) or die ("Query career salah : ".mysql_error());
+						
+						while ($juniorRow = mysql_fetch_array($juniorQry)) {
+							echo $juniorRow['content'];
+						}
+						?>
+					</div>
+				</div>
+			</div>
                     
-        	</div>            
-        </div>
+		</div>
+	<!-- </div> -->
 
+		<!-- Menu Contact -->
         <div id="templatemo-contact">
             <div class="container">
                 <div class="row">
                     <div class="templatemo-line-header head_contact">
-                        <div class="text-center tag-head">
+                        <!-- Judul -->
+						<div class="text-center tag-head">
                             <hr class="team_hr2 team_hr_left2 hr_gray"/>
-                            <!--span class="txt_darkgrey">CONTACT US</span-->	
                             <div class="txt_dark text-center">CONTACT US</div>
                             <hr class="team_hr2 team_hr_right2 hr_gray"/>
-                            <div class="clearfix"></div>
-                        </div>	
+                        </div>
+						
                         <div class="col-md-12">
                             <div class="templatemo-service-contact" >
                                 <p style="font-size:22px;"><strong>HAVE A PROJECT IN MIND?</strong></p>
@@ -670,81 +677,85 @@
                         </div>			
                     </div>
 					
+					<!-- Isi -->
                     <div class="col-md-8">
                         <div class="templatemo-contact-map" id="map-canvas"> </div>  
-                        <div class="clearfix"></div>
                         <?php
-								$contactSql = "SELECT * FROM pagecontact ORDER BY contactid ASC";
-								$contactQry = mysql_query($contactSql, $koneksi)
-										or die ("Query contact salah : ".mysql_error());
+							$contactSql = "SELECT * FROM pagecontact ORDER BY contactid ASC";
+							$contactQry = mysql_query($contactSql, $koneksi) or die ("Query contact salah : ".mysql_error());
 								
-									while ($contactRow = mysql_fetch_array($contactQry)) {
+							while ($contactRow = mysql_fetch_array($contactQry)) {
 						?>                   
-                        
-                        <i>
+								<i>
                     </div>
-                    <div class="col-md-4 contact_right">
-                        <p>You can find us on.</p>
-                        <p><img src="images/location.png" alt="icon 1" /> <?php echo $contactRow['address']; ?></p>
-                        <p><img src="images/phone1.png"  alt="icon 2" /> <?php echo $contactRow['phone']; ?></p>
-                        <p><img src="images/globe.png" alt="icon 3" /><a class="link_orange" href="#">
-                        		<span class="txt_orange"> <a href="mailto:<?php echo $contactRow['email']; ?>"><?php echo $contactRow['email']; ?></a></span></p>
-                        <?php
-									}
+									<div class="col-md-4 contact_right">
+										<p>You can find us on.</p>
+										<p><img src="images/location.png" alt="icon 1" /> <?php echo $contactRow['address']; ?></p>
+										<p><img src="images/phone1.png" alt="icon 2" /> <?php echo $contactRow['phone']; ?></p>
+										<p><img src="images/globe.png" alt="icon 3" /><a class="link_orange" href="#">
+											<span class="txt_orange"> <a href="mailto:<?php echo $contactRow['email']; ?>"><?php echo $contactRow['email']; ?></a></span>
+										</p>
+								</i>
+						<?php
+							}
 						?>
-                        <form class="form-horizontal" role="form" action="?page=comment_new.php" method="post" name="frmedit" target="_self" id="frmedit" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <input name="txtemail" type="txtemail" class="form-control" placeholder="Your Email..." maxlength="40" />
-                            </div>
-                            <div class="form-group">
-                                <input name="txtname" type="txtname" class="form-control" placeholder="Your Name..." maxlength="40" />
-                            </div>
-                            <div class="form-group">
-                                <textarea name="txtcontent" class="form-control" style="height: 130px;" placeholder="Write down your message..."></textarea>
-                            </div>
-                            <button class="btn btn-orange pull-right" name="btnSave" type="submit" style="cursor:pointer;">SEND</button>
-                        </form>
-                        	
-                    </div>
+										<form class="form-horizontal" role="form" action="?page=comment_new.php" method="post" name="frmedit" target="_self" id="frmedit" enctype="multipart/form-data">
+											<div class="form-group">
+												<input name="txtemail" type="txtemail" class="form-control" placeholder="Your Email..." maxlength="40" />
+											</div>
+											<div class="form-group">
+												<input name="txtname" type="txtname" class="form-control" placeholder="Your Name..." maxlength="40" />
+											</div>
+											<div class="form-group">
+												<textarea name="txtcontent" class="form-control" style="height: 130px;" placeholder="Write down your message..."></textarea>
+											</div>
+											<button class="btn btn-orange pull-right" name="btnSave" type="submit" style="cursor:pointer;">SEND</button>
+										</form>
+											
+									</div>
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </div><!-- /#templatemo-contact -->
 
-               
+		<!-- Footer -->
         <div class="templatemo-footer" >
             <div class="container">
                 <div class="row">
                     <div class="text-center">
-
-                        <div class="footer_container">
+                        <!-- Sosial Media -->
+						<div class="footer_container">
                             <ul class="list-inline">
                                 <li>
                                     <a href="https://www.facebook.com/Fingertechnology" target="_blank">
-                                        <span class="social-icon-fb"></span>
+                                        <span class="social-icon-fb"/>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://www.twitter.com/Fingertechnology" target="_blank">
-                                        <span class="social-icon-twitter"></span>
+                                        <span class="social-icon-twitter"/>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://www.linkedin.com/" target="_blank">
-                                        <span class="social-icon-linkedin"></span>
+                                        <span class="social-icon-linkedin"/>
                                     </a>
                                 </li>
                             </ul>
-                            <div class="height30"></div>
-                            	<a class="btn btn-lg btn-orange" href="#" role="button" id="btn-back-to-top">Back To Top</a>
-                            <div class="height30"></div>
+                            
+							<div class="height30"></div>
+                            <a class="btn btn-lg btn-orange" href="#" role="button">Back To Top</a>
+                            
                         </div>
-                        <div class="footer_bottom_content">Copyright © 2014 <a href="#">FingerTechnology</a></div>
                         
+						<!-- Copyright -->
+						<div class="footer_bottom_content">
+							Copyright © 2014 <a href="#">FingerTechnology</a>
+						</div>
                     </div>
                 </div>
             </div>
         </div>
-		<!--<script src="colorbox_appspro/js/jquery.min_1.js"></script>-->
+		
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="js/jquery.min.js" type="text/javascript"></script>
         <script src="js/bootstrap.min.js"  type="text/javascript"></script>
@@ -762,8 +773,9 @@
 			});
 		</script>
 		<script type='text/javascript' src='colorbox_appspro/js/shortcodes.typography.js?ver=4.0'></script>
-<script type='text/javascript' src='colorbox_appspro/js/shortcodes.elements.js?ver=4.0'></script>
-<script type='text/javascript' src='colorbox_appspro/js/shortcodes.template.js?ver=4.0'></script>
-<script src="colorbox_appspro/js/jquery.colorbox_1.js"></script>
-</div>
+		<script type='text/javascript' src='colorbox_appspro/js/shortcodes.elements.js?ver=4.0'></script>
+		<script type='text/javascript' src='colorbox_appspro/js/shortcodes.template.js?ver=4.0'></script>
+		<script src="colorbox_appspro/js/jquery.colorbox_1.js"></script>
+	</body>
+<!-- </div> -->
 </html>
