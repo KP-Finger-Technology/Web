@@ -227,27 +227,35 @@
     </head>
     
     <body class="home blog custom-background" data-tablet-width="920">
-       <div class="templatemo-top-bar" id="templatemo-top">
+       <!-- Menambahkan space kosong di atas static menu -->
+		<!-- <div class="templatemo-top-bar" id="templatemo-top">
            <div class="container">
-                <div class="subheader">
-                </div>
+                <div class="subheader"></div>
             </div>
-        </div>
-        <div class="templatemo-top-menu" >
+        </div> -->
+        
+		<div class="templatemo-top-menu" >
             <div class="container">
-                <!-- Static navbar -->
+				<!-- Static navbar -->
                 <div class="navbar navbar-default" role="navigation">
                     <div class="container">
-                        <div class="navbar-header">
-                                <a class="navbar-brand" href="http://fingertechnology.mobi" rel="nofollow"><img src="images/logo3.jpg" alt="logo" /></a>
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                </button>
+						
+						<div class="navbar-header">
+                                <!-- Logo Fingertech -->
+								<a class="navbar-brand" href="http://fingertechnology.mobi" rel="nofollow">
+									<img src="images/logo3.jpg" alt="logo"/>
+								</a>
                                 
+								<!-- Bundle menu-menu -->
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+									<span class="sr-only">Toggle navigation</span>
+									<!-- Menambahkan jumlah garis pada saat navbar-toggle aktif -->
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+                                </button>
                         </div>
+						
                         <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;margin-right:75px;">
                                 <li><a href="#templatemo-top"><strong>HOME</strong></a></li>
@@ -259,7 +267,8 @@
                             	<li><a href="blog.php" class="external-link"><strong>BLOG</strong></a></li>
 							</ul>
                         </div>
-                    </div><!--/.container-fluid -->
+                    
+					</div><!--/.container-fluid -->
                 </div><!--/.navbar -->
             </div> <!-- /container -->
         </div>
