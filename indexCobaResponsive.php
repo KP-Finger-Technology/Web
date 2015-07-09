@@ -342,247 +342,265 @@
             	</div>
         	</div>
 
-		<!-- Menu Products -->
-        <div id="templatemo-products" >
-            <div class="container">
-                <div class="row">
-                    <div class="templatemo-line-header" >
-                        <div class="text-center tag-head">
-                            <hr class="team_hr2 team_hr_left2 hr_gray"/>	
-                            <div class="txt_dark text-center">OUR PRODUCTS</div>
-                            <hr class="team_hr2 team_hr_right2 hr_gray"/>
-                        </div>
-                    </div>
-                </div> <!-- /.row -->
-
-                <div class="row text-center">
-                    <!-- Carousel -->
-                    <section id="dg-container" class="dg-container">
-						<div class="dg-wrapper">
-							<?php
-								$productsSql = "SELECT * FROM pageproducts ORDER BY productsid ASC";
-								$productsQry = mysql_query($productsSql, $koneksi) or die ("Query products salah : ".mysql_error());
-							
-								while ($productsRow = mysql_fetch_array($productsQry)) {
-							?>
-									<a class="iframe" href="products.php?Product_id=<?php echo $productsRow['productsid']; ?>" data-group="gallery-graphic" title="<?php echo $productsRow['content']; ?>">
-										<!-- Gambar -->
-										<img src="images/<?php echo $productsRow['picture']; ?>" alt="image01" width="481px" height="316px">
-										
-										<!-- Judul gambar -->
-										<div>
-											<p style = "margin-bottom:-30px">
-												<?php echo $productsRow['content'];?>
-											</p>
-										</div>
-									</a>
-							<?php
-								}
-							?>
+			<!-- Menu Products -->
+			<div id="templatemo-products" >
+				<div class="container">
+					<!-- Judul -->
+					<div class="row">
+						<div class="templatemo-line-header" >
+							<div class="text-center tag-head">
+								<hr class="team_hr2 team_hr_left2 hr_gray"/>	
+								<div class="txt_dark text-center">OUR PRODUCTS</div>
+								<hr class="team_hr2 team_hr_right2 hr_gray"/>
+							</div>
 						</div>
-						
-						<!-- Tombol navigasi kiri dan kanan -->
-						<nav>	
-							<span class="dg-prev">&lt;</span>
-							<span class="dg-next">&gt;</span>
-						</nav>
-					</section>
-                </div>
-            </div><!-- /.container -->
-        </div> <!-- /.product-portfolio -->
-		
-		<!-- Menu Services -->
-        <div class="templatemo-team" id="templatemo-about">
-             <div class="container">
-             	<div class="row">
-                    <div class="templatemo-line-header" >
-                        <div class="text-center tag-head">
-                            <hr class="team_hr2 team_hr_left2 hr_gray"/>
-                            <!--span class="txt_darkgrey">CONTACT US</span-->	
-                            <div class="txt_dark text-center">WHAT WE DO?</div>
-                            <hr class="team_hr2 team_hr_right2 hr_gray"/>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                    <div class="templatemo-gallery-category" style="font-size:16px; margin-top:80px;">
-                    </div>
-                </div>
- 				<div class="container">
-                    <section id="set-1">
-                        <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
-						<?php 	$wdSql = "SELECT * FROM pagewebs ORDER BY webid ASC limit 1";
-                                                    	$wdQry = mysql_query($wdSql, $koneksi) or die ("Query desktop salah : ".mysql_error());
-                                                                 
-                                                    		while ($wdRow = mysql_fetch_array($wdQry)) {
-                                                ?>
-                            <a href="images/web/<?php echo $wdRow['picture']; ?>" id="btn3" class="group3 hi-icon hi-icon-earth" title="<?php echo $wdRow['content']; ?>">Web</a>
-							<?php
-							}?>
+					</div> <!-- /.row -->
+					
+					<!-- Isi -->
+					<div class="row text-center">
+						<!-- Carousel -->
+						<section id="dg-container" class="dg-container">
+							<div class="dg-wrapper">
+								<?php
+									$productsSql = "SELECT * FROM pageproducts ORDER BY productsid ASC";
+									$productsQry = mysql_query($productsSql, $koneksi) or die ("Query products salah : ".mysql_error());
+								
+									while ($productsRow = mysql_fetch_array($productsQry)) {
+								?>
+										<a class="iframe" href="products.php?Product_id=<?php echo $productsRow['productsid']; ?>" data-group="gallery-graphic" title="<?php echo $productsRow['content']; ?>">
+											<!-- Gambar -->
+											<img src="images/<?php echo $productsRow['picture']; ?>" alt="image01" width="481px" height="316px">
+											
+											<!-- Judul gambar -->
+											<div>
+												<p style = "margin-bottom:-30px">
+													<?php echo $productsRow['content'];?>
+												</p>
+											</div>
+										</a>
+								<?php
+									}
+								?>
+							</div>
 							
-						<?php
-                                                	$pmSql = "SELECT * FROM pagemobiles ORDER BY mobileid ASC limit 1";
-                                                    $pmQry = mysql_query($pmSql, $koneksi) or die ("Query mobile salah : ".mysql_error());
-                                                                 
-                                                    while ($pmRow = mysql_fetch_array($pmQry)) {
-                                                ?>
-                            <a href="images/mobile/<?php echo $pmRow['picture']; ?>" id="btn1" class="group1 hi-icon hi-icon-mobile" title="<?php echo $pmRow['content']; ?>">Mobile</a>
-							<?php
-							}?>
-							
-						<?php 	$desSql = "SELECT * FROM pagedesktop ORDER BY desktopid ASC limit 1";
-                                                    	$desQry = mysql_query($desSql, $koneksi) or die ("Query desktop salah : ".mysql_error());
-                                                                 
-                                                    		while ($desRow = mysql_fetch_array($desQry)) {
-                                                ?>
-                            <a href="images/desktop/<?php echo $desRow['picture']; ?>" id="btn2" class="group2 hi-icon hi-icon-screen" title="<?php echo $desRow['content']; ?>">Desktop</a>
-							<?php
-							}?>
-							
-                        </div>
-                    </section>
-                </div>
-                <div class="gkTabContainer0" id="mb" >
-                    <div class="gkTabContainer1">
-                        <div class="gkTabContainer2">
-                            <div class="gkTabItem active">
-                                <div class="gkTabItemSpace">
-                                    <div class="custom">
-                                    <?php
-										$mobileSql = "SELECT * FROM services WHERE tittle = 'Mobile'";
-										$mobileQry = mysql_query($mobileSql, $koneksi) or die ("Query mobile salah : ".mysql_error());
-										
-										while ($mobileRow = mysql_fetch_array($mobileQry)) {
-									?>									
-                                        <div class="gkTab-1"></div>
-                                            <h2 class="tabTitle">
-                                            <span id="tet1x">
-												<?php
-                                                	$pmSql = "SELECT * FROM pagemobiles ORDER BY mobileid ASC limit 1, 18446744073709551615";
-                                                    $pmQry = mysql_query($pmSql, $koneksi) or die ("Query mobile salah : ".mysql_error());
-                                                                 
-                                                    while ($pmRow = mysql_fetch_array($pmQry)) {
-                                                ?>
-                                                        <a class="group1" href="images/mobile/<?php echo $pmRow['picture']; ?>" data-group="gallery-inspiration" title="<?php echo $pmRow['content']; ?>">
-                                                        <?php
-															}
-														?>
-														Mobile
-														</a>
-                                                
-                                            </span></h2></a>
-                                        <p class="tabContent" id="test1">
-                                        	<?php echo $mobileRow['content']; ?>
-                                        </p>
-                                    <?php
-										}
-									?>
-                                    </div>
-                                </div>
-                            </div>           
-                        </div>
-                    </div>
-                </div>
-                <div class="gkTabContainer0" id="des" hidden="true">
-                    <div class="gkTabContainer1">
-                        <div class="gkTabContainer2">
-                            <div class="gkTabItem active">
-                                <div class="gkTabItemSpace">
-                                    <div class="custom">
-                                    <?php
-										$desktopSql = "SELECT * FROM services WHERE tittle = 'Desktop'";
-										$desktopQry = mysql_query($desktopSql, $koneksi) or die ("Query mobile salah : ".mysql_error());
-										
-										while ($desktopRow = mysql_fetch_array($desktopQry)) {
-									?>									
-                                        <div class="gkTab-2"></div>
-                                            <h2 class="tabTitle">
-                                            <span id="tet1x">
-												<?php 	$desSql = "SELECT * FROM pagedesktop ORDER BY desktopid ASC limit 1";
-												
-												$sql_des = "select count(*) as cek_des from pagedesktop";
-								//$exec = mysql_query($sql1);
-								$ambil_data = mysql_query($sql_des);
-								if ($data = mysql_fetch_array($ambil_data))
-								{
-									$cek_des = $data["cek_des"];
-								}
-								if($cek_des == 1)
-								{
+							<!-- Tombol navigasi kiri dan kanan -->
+							<nav>	
+								<span class="dg-prev">&lt;</span>
+								<span class="dg-next">&gt;</span>
+							</nav>
+						</section>
+					</div>
+				</div><!-- /.container -->
+			</div> <!-- /.product-portfolio -->
+			
+			<!-- Menu Services -->	
+			<div class="templatemo-team" id="templatemo-about">
+				<div class="container">
+					<div class="row">
+						<div class="templatemo-line-header" >
+							<div class="text-center tag-head">
+								<hr class="team_hr2 team_hr_left2 hr_gray"/>
+								<div class="txt_dark text-center">WHAT WE DO?</div>
+								<hr class="team_hr2 team_hr_right2 hr_gray"/>
+							</div>
+						</div>
+					</div>
+					
+					<div class="container">
+						<section id="set-1">
+							<div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
+								<!-- Web -->
+								<?php
+									$wdSql = "SELECT * FROM pagewebs ORDER BY webid ASC limit 1";
+									$wdQry = mysql_query($wdSql, $koneksi) or die ("Query desktop salah : ".mysql_error());
+																		 
+									while ($wdRow = mysql_fetch_array($wdQry)) {
+								?>
+										<a href="images/web/<?php echo $wdRow['picture'];?>" id="btn3" class="group3 hi-icon hi-icon-earth" title="<?php echo $wdRow['content'];?>">Web</a>
+								<?php
+									}
+								?>
+								
+								<!-- Mobile -->
+								<?php
+									$pmSql = "SELECT * FROM pagemobiles ORDER BY mobileid ASC limit 1";
+									$pmQry = mysql_query($pmSql, $koneksi) or die ("Query mobile salah : ".mysql_error());
+																		 
+									while ($pmRow = mysql_fetch_array($pmQry)) {
+								?>
+										<a href="images/mobile/<?php echo $pmRow['picture']; ?>" id="btn1" class="group1 hi-icon hi-icon-mobile" title="<?php echo $pmRow['content']; ?>">Mobile</a>
+								<?php
+									}
+								?>
+								
+								<!-- Desktop -->
+								<?php
 									$desSql = "SELECT * FROM pagedesktop ORDER BY desktopid ASC limit 1";
-									$group = "group4";
-								}
-								else
-								{
-									$desSql = "SELECT * FROM pagedesktop ORDER BY desktopid ASC limit 1, 18446744073709551615";
-									$group = "group2";
-								}
-										
-                                                    	$desQry = mysql_query($desSql, $koneksi) or die ("Query desktop salah : ".mysql_error());
-                                                                 
-                                                    		while ($desRow = mysql_fetch_array($desQry)) {
-                                                ?>
-                                                        	<a class="<?php echo $group;?>" href="images/desktop/<?php echo $desRow['picture']; ?>" data-group="gallery-creative" title="<?php echo $desRow['content']; ?>">
-                                                            <?php
-																}
+									$desQry = mysql_query($desSql, $koneksi) or die ("Query desktop salah : ".mysql_error());
+																		 
+									while ($desRow = mysql_fetch_array($desQry)) {
+								?>
+										<a href="images/desktop/<?php echo $desRow['picture']; ?>" id="btn2" class="group2 hi-icon hi-icon-screen" title="<?php echo $desRow['content']; ?>">Desktop</a>
+								<?php
+									}
+								?>
+							</div>
+						</section>
+					</div>
+					
+					<!-- Isi submenu Mobile -->
+					<div class="gkTabContainer0" id="mb">
+						<div class="gkTabContainer1">
+							<div class="gkTabContainer2">
+								<div class="gkTabItem active">
+									<div class="gkTabItemSpace">
+										<div class="custom">
+											<?php
+												$mobileSql = "SELECT * FROM services WHERE tittle = 'Mobile'";
+												$mobileQry = mysql_query($mobileSql, $koneksi) or die ("Query mobile salah : ".mysql_error());
+												
+												while ($mobileRow = mysql_fetch_array($mobileQry)) {
+											?>									
+													<div class="gkTab-1"></div>
+													<h2 class="tabTitle">
+														<span id="tet1x">
+															<?php
+																$pmSql = "SELECT * FROM pagemobiles ORDER BY mobileid ASC limit 1, 18446744073709551615";
+																$pmQry = mysql_query($pmSql, $koneksi) or die ("Query mobile salah : ".mysql_error());
+																			 
+																while ($pmRow = mysql_fetch_array($pmQry)) {
 															?>
-                                                            Desktop</a>
-                                                
-                                            </span></h2></a>
-                                        <p class="tabContent" id="test1">
-                                        	<?php echo $desktopRow['content']; ?>
-                                        </p>
-                                    <?php
-										}
-									?>
-                                    </div>
-                                </div>
-                            </div>           
-                        </div>
-                    </div>
-                </div>
-                <div class="gkTabContainer0" id="wd" hidden="true">
-                    <div class="gkTabContainer1">
-                        <div class="gkTabContainer2">
-                            <div class="gkTabItem active">
-                                <div class="gkTabItemSpace">
-                                    <div class="custom">
-                                    <?php
-										$websSql = "SELECT * FROM services WHERE tittle = 'Web Design'";
-										$websQry = mysql_query($websSql, $koneksi) or die ("Query webs salah : ".mysql_error());
-										
-										while ($websRow = mysql_fetch_array($websQry)) {
-									?>									
-                                        <div class="gkTab-3"></div>
-                                            <h2 class="tabTitle">
-                                            <span id="tet1x">
-												<?php 	$wdSql = "SELECT * FROM pagewebs ORDER BY webid ASC limit 1, 18446744073709551615";
-                                                    	$wdQry = mysql_query($wdSql, $koneksi) or die ("Query desktop salah : ".mysql_error());
-                                                                 
-                                                    		while ($wdRow = mysql_fetch_array($wdQry)) {
-                                                ?>
-                                                        	<a class="group3" href="images/web/<?php echo $wdRow['picture']; ?>" title="<?php echo $wdRow['content']; ?>" data-group="gallery-design">
+																	<a class="group1" href="images/mobile/<?php echo $pmRow['picture']; ?>" data-group="gallery-inspiration" title="<?php echo $pmRow['content']; ?>">
 															<?php
 																}
 															?>
-                                                            Web Design</a>
-                                                
-                                            </span></h2></a>
-                                        <p class="tabContent" id="test1">
-                                        	<?php echo $websRow['content']; ?>
-                                        </p>
-                                    <?php
-										}
-									?>
-                                    </div>
-                                </div>
-                            </div>           
-                        </div>
-                    </div>
-                </div><!-- end of the .gk-page-wrap section -->	
-
-</div>
-            </div>
-        </div><!-- /.templatemo-team -->
+																		Mobile
+																	</a>
+														</span>
+													</h2><!-- </a> -->
+													
+													<!-- Deskripsi -->
+													<p class="tabContent" id="test1">
+														<?php echo $mobileRow['content']; ?>
+													</p>
+											<?php
+												}
+											?>
+										</div>
+									</div>
+								</div>           
+							</div>
+						</div>
+					</div>
+					
+					<!-- Isi submenu Desktop -->
+					<div class="gkTabContainer0" id="des" hidden="true">
+						<div class="gkTabContainer1">
+							<div class="gkTabContainer2">
+								<div class="gkTabItem active">
+									<div class="gkTabItemSpace">
+										<div class="custom">
+											<?php
+												$desktopSql = "SELECT * FROM services WHERE tittle = 'Desktop'";
+												$desktopQry = mysql_query($desktopSql, $koneksi) or die ("Query mobile salah : ".mysql_error());
+													
+												while ($desktopRow = mysql_fetch_array($desktopQry)) {
+											?>									
+													
+													<div class="gkTab-2"></div>
+													<h2 class="tabTitle">
+														<span id="tet1x">
+															<?php
+																$desSql = "SELECT * FROM pagedesktop ORDER BY desktopid ASC limit 1";
+																$sql_des = "select count(*) as cek_des from pagedesktop";
+												
+																$ambil_data = mysql_query($sql_des);
+																if ($data = mysql_fetch_array($ambil_data)) {
+																	$cek_des = $data["cek_des"];
+																}
+																
+																if($cek_des == 1) {
+																	$desSql = "SELECT * FROM pagedesktop ORDER BY desktopid ASC limit 1";
+																	$group = "group4";
+																}
+																else {
+																	$desSql = "SELECT * FROM pagedesktop ORDER BY desktopid ASC limit 1, 18446744073709551615";
+																	$group = "group2";
+																}
+																
+																$desQry = mysql_query($desSql, $koneksi) or die ("Query desktop salah : ".mysql_error());
+																				 
+																while ($desRow = mysql_fetch_array($desQry)) {
+															?>
+																	<a class="<?php echo $group;?>" href="images/desktop/<?php echo $desRow['picture']; ?>" data-group="gallery-creative" title="<?php echo $desRow['content']; ?>">
+															<?php
+																}
+															?>
+																		Desktop
+																	</a>
+														</span>
+													</h2><!-- </a> -->
+													
+													<!-- Deskripsi -->
+													<p class="tabContent" id="test1">
+														<?php echo $desktopRow['content']; ?>
+													</p>
+											<?php
+												}
+											?>
+										</div>
+									</div>
+								</div>           
+							</div>
+						</div>
+					</div>
+					
+					<!-- Isi submenu Web Design -->
+					<div class="gkTabContainer0" id="wd" hidden="true">
+						<div class="gkTabContainer1">
+							<div class="gkTabContainer2">
+								<div class="gkTabItem active">
+									<div class="gkTabItemSpace">
+										<div class="custom">
+											<?php
+												$websSql = "SELECT * FROM services WHERE tittle = 'Web Design'";
+												$websQry = mysql_query($websSql, $koneksi) or die ("Query webs salah : ".mysql_error());
+												
+												while ($websRow = mysql_fetch_array($websQry)) {
+											?>									
+													<div class="gkTab-3"></div>
+													<h2 class="tabTitle">
+														<span id="tet1x">
+															<?php
+																$wdSql = "SELECT * FROM pagewebs ORDER BY webid ASC limit 1, 18446744073709551615";$wdQry = mysql_query($wdSql, $koneksi) or die ("Query desktop salah : ".mysql_error());
+																			 
+																while ($wdRow = mysql_fetch_array($wdQry)) {
+															?>
+																	<a class="group3" href="images/web/<?php echo $wdRow['picture']; ?>" title="<?php echo $wdRow['content']; ?>" data-group="gallery-design">
+															<?php
+																}
+															?>
+																		Web Design
+																	</a>
+														</span>
+													</h2><!-- </a> -->
+												
+												<!-- Deskripsi -->
+												<p class="tabContent" id="test1">
+													<?php echo $websRow['content']; ?>
+												</p>
+											<?php
+												}
+											?>
+										</div>
+									</div>
+								</div>           
+							</div>
+						</div>
+					</div><!-- end of the .gk-page-wrap section -->	
+				</div>
+			</div>
+		</div><!-- /.templatemo-team -->
 		
         <div class="templatemo-team2" id="templatemo-career">
                 <div class="container">
