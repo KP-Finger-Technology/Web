@@ -227,7 +227,7 @@
     </head>
     
     <body class="home blog custom-background" data-tablet-width="920">
-       <!-- Menambahkan space kosong di atas static menu -->
+		<!-- Menambahkan space kosong di atas static menu -->
 		<!-- <div class="templatemo-top-bar" id="templatemo-top">
            <div class="container">
                 <div class="subheader"></div>
