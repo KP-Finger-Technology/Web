@@ -282,7 +282,6 @@
 				<!-- Static navbar -->
                 <div class="navbar navbar-default" role="navigation">
                     <div class="container">
-						
 						<div class="navbar-header">
                                 <!-- Logo Fingertech -->
 								<a class="navbar-brand" href="http://fingertechnology.mobi" rel="nofollow">
@@ -310,7 +309,6 @@
                             	<li><a href="blog.php" class="external-link"><strong>BLOG</strong></a></li>
 							</ul>
                         </div>
-                    
 					</div><!--/.container-fluid -->
                 </div><!--/.navbar -->
             </div> <!-- /container -->
@@ -325,168 +323,186 @@
                             <hr class="team_hr2 team_hr_right2 hr_gray"/>
                             <div class="clearfix"></div>
                         </div>
-                    <div class="clearfix"></div>
-                    <div class="templatemo-gallery-category" style="font-size:16px; margin-top:10px;">
-                    </div>
                 </div> <!-- /.row -->
-
-                <div class="clearfix"></div>                
                 
 	            <div class="text-right" id="search_container">
 	            	<form role="form" method="post" name="frmsearch" target="_self" id="frmsearch" enctype="multipart/form-data">
-	            	<input type="text" name="search" id="search" placeholder="Search" value="<?php if(isset($_POST['search'])) echo $_POST['search']; ?>" />
-	            	<button class="plus" type="submit">+</button>
+						<input type="text" name="search" id="search" placeholder="Search" value="<?php if(isset($_POST['search'])) echo $_POST['search']; ?>" />
+						<button class="plus" type="submit">+</button>
 	            	</form>
 	            </div>
 				
 	            <div style="position:relative;">
 					<div class="masonry">
-
-					<?php
-                    	$number = 1;
-                    	if(isset($_POST['search'])){
-                    		$blogSql = "SELECT * FROM blog where title like '%".$_POST['search']."%' ORDER BY publish_on,blogid ASC";
-                    	}
-                    	else {
-                    		if(isset($_GET)){
-                    			if(isset($_GET['category'])){
-                    				$blogSql = "SELECT * FROM blog where category='".$_GET['category']."' ORDER BY publish_on,blogid ASC";
-                    			}
-                    			else if(isset($_GET['year'])){
-                    				if(isset($_GET['month'])){
-                    					$blogSql = "SELECT * FROM blog where YEAR(publish_on)='".$_GET['year']."' and month(publish_on)='".$_GET['month']."' ORDER BY publish_on,blogid ASC";
-                    				}
-                    				else {
-                    					$blogSql = "SELECT * FROM blog where YEAR(publish_on)='".$_GET['year']."' ORDER BY publish_on,blogid ASC";
-                    				}
-                    			}
-                    			else {
-                    				$blogSql = "SELECT * FROM blog ORDER BY publish_on,blogid ASC";
-                    			}
-                    		}
-                    		else {
-                    			$blogSql = "SELECT * FROM blog ORDER BY publish_on,blogid ASC";
+						<?php
+							$number = 1;
+							if(isset($_POST['search'])) {
+								$blogSql = "SELECT * FROM blog where title like '%".$_POST['search']."%' ORDER BY publish_on,blogid ASC";
 							}
-						}
-						$blogQry = mysql_query($blogSql, $koneksi) or die ("Query products salah : ".mysql_error());
-							echo "<div class=\"col-sm-9 col-xs-12 col-md-8 col-lg-8\">";
-							while ($blogRow = mysql_fetch_array($blogQry)) {
-								// if($number==1){
-									// echo "<div class=\"item\">";
-									// echo "<img src=\"images/blog/".$blogRow['image_name']."\" width=\"470px\">";
-									// echo "<p><b>".$blogRow['title']."</b></p>";
-									
-									// $line=$blogRow['content'];
-									// if (preg_match('/^.{1,300}\b/s', $blogRow['content'], $match))
-									// {
-									    // $line=$match[0];
-									// }
-									// echo "<p class=\"blogcontent\">".$line."</p>";
-								// }
-								// else {
-									echo "<div class=\"item\">";
-									echo "<a href=\"blog_detail.php?Kode=".$blogRow['blogid']."\">";
-									echo "<img src=\"images/blog/".$blogRow['image_name']."\" width=\"270px\">";
-									echo "<p><b>".$blogRow['title']."</b></p>";
-									echo "</a>";
-									
-									$line=$blogRow['content'];
-									if (preg_match('/^.{1,300}\b/s', $blogRow['content'], $match))
-									{
-									    $line=$match[0];
-									}
-									echo "<p class=\"blogcontent\">".$line."</p>";
-								// }
-								echo "<div style=\"border-bottom:1px solid #f0f0f0; margin:15px;\"></div>";
-								// echo "<p class=\"viewmore\"><i><a href=\"blog_detail.php?Kode=".$blogRow['blogid']."\">view more..</a></i></p>";
-								echo "</div>";
-								$number++;
-							}
-							echo "</div>";
-					?>
-					
-					<!-- update here-->
-					<div class="col-sm-3 col-xs-12 col-md-4 col-lg-4" id="right_content">
-						<div style="background-color:white;margin-bottom:5px;padding:20px 20px;">
-							<h3>Latest Blogs</h3>
-							<hr>                                    
-							<?php
-								$latestSql = "SELECT * FROM blog ORDER BY publish_on,blogid ASC limit 5";
-								$latestQry = mysql_query($latestSql, $koneksi) or die ("Query products salah : ".mysql_error());
-					
-								while ($latestRow = mysql_fetch_array($latestQry)) {
-									echo "<a href=\"blog_detail.php?Kode=".$latestRow['blogid']."\">".$latestRow['title']."</a>";
-									echo "<br>";
-								}
-							?>
-							<hr>
-							<br>
-							<h3>Categories</h3>
-							<hr>                                    
-							<?php
-								$categorySql = "SELECT * FROM blog group by category ASC";
-								$categoryQry = mysql_query($categorySql, $koneksi) or die ("Query products salah : ".mysql_error());
-					
-								while ($categoryRow = mysql_fetch_array($categoryQry)) {
-									echo "<a href=\"blog.php?category=".$categoryRow['category']."\">".$categoryRow['category']."</a>";
-									echo "<br>";
-								}
-							?>
 
-							<hr>
-							<br>
-							<h3>Archives</h3>
-							<hr>                                    
-							
-							<?php
-								$tahun = 0;
-								$bulan = 0;
-								$arcSql = "SELECT YEAR(publish_on) AS yr, MONTH(publish_on) AS mnth, DATE_FORMAT(publish_on,'%M') AS mnth2 FROM blog GROUP BY YEAR(publish_on),MONTH(publish_on) ORDER BY yr,mnth DESC;";
-								$arcQry = mysql_query($arcSql, $koneksi) or die ("Query products salah : ".mysql_error());
-								
-								echo "<ul class=\"archive\">";
-								while ($arcRow = mysql_fetch_array($arcQry)) {
-									
-									if ($tahun == $arcRow['yr']){
-										if($bulan != $arcRow['mnth']){
-											$bulan = $arcRow['mnth'];
-											echo "<li><a href=\"blog.php?year=".$arcRow['yr']."&month=".$arcRow['mnth']."\">".$arcRow['mnth2']."</a></li>";
+							else {
+								if(isset($_GET)) {
+									if(isset($_GET['category'])) {
+										$blogSql = "SELECT * FROM blog where category='".$_GET['category']."' ORDER BY publish_on,blogid ASC";
+									} else if(isset($_GET['year'])) {
+										if(isset($_GET['month'])) {
+											$blogSql = "SELECT * FROM blog where YEAR(publish_on)='".$_GET['year']."' and month(publish_on)='".$_GET['month']."' ORDER BY publish_on,blogid ASC";
+										} else {
+											$blogSql = "SELECT * FROM blog where YEAR(publish_on)='".$_GET['year']."' ORDER BY publish_on,blogid ASC";
 										}
+									} else {
+										$blogSql = "SELECT * FROM blog ORDER BY publish_on,blogid ASC";
 
 									}
-									else {
-										$tahun = $arcRow['yr'];
-										echo "<a href=\"blog.php?year=".$arcRow['yr']."\">".$arcRow['yr']."</a>";
-
-										$bulan = $arcRow['mnth'];
-										echo "<li><a href=\"blog.php?year=".$arcRow['yr']."&month=".$arcRow['mnth']."\">".$arcRow['mnth2']."</a></li>";
-									}
-									
-									
+								} else {
+									$blogSql = "SELECT * FROM blog ORDER BY publish_on,blogid ASC";
 								}
-								echo "</ul>";
-							?>
-							<hr>
+							}
+							
+							$blogQry = mysql_query($blogSql, $koneksi) or die ("Query products salah : ".mysql_error());
+							echo "<div class=\"col-sm-9 col-xs-12 col-md-8 col-lg-8\">";
+
+									while ($blogRow = mysql_fetch_array($blogQry)) {
+										// if($number==1){
+											// echo "<div class=\"item\">";
+											// echo "<img src=\"images/blog/".$blogRow['image_name']."\" width=\"470px\">";
+											// echo "<p><b>".$blogRow['title']."</b></p>";
+											
+											// $line=$blogRow['content'];
+											// if (preg_match('/^.{1,300}\b/s', $blogRow['content'], $match))
+											// {
+												// $line=$match[0];
+											// }
+											// echo "<p class=\"blogcontent\">".$line."</p>";
+										// } else {
+												echo "<div class=\"item\">";
+												echo "<a href=\"blog_detail.php?Kode=".$blogRow['blogid']."\">";
+												echo "<img src=\"images/blog/".$blogRow['image_name']."\" width=\"270px\">";
+												echo "<p><b>".$blogRow['title']."</b></p>";
+												echo "</a>";
+												
+												$line=$blogRow['content'];
+												if (preg_match('/^.{1,300}\b/s', $blogRow['content'], $match))
+												{
+													$line=$match[0];
+												}
+												echo "<p class=\"blogcontent\">".$line."</p>";
+										// }
+										
+										echo "<div style=\"border-bottom:1px solid #f0f0f0; margin:15px;\"></div>";
+										// echo "<p class=\"viewmore\"><i><a href=\"blog_detail.php?Kode=".$blogRow['blogid']."\">view more..</a></i></p>";
+										echo "</div>";
+										$number++;
+									}
+							echo "</div>";
+						?>
+					
+							<!-- Update here-->
+							<div class="col-sm-4 col-xs-12 col-md-4 col-lg-4" id="right_content">
+								<div style="background-color:white;margin-bottom:5px;padding:20px 20px;">
+									<h3>Latest Blogs</h3>
+									<hr>                                    
+									<?php
+										$latestSql = "SELECT * FROM blog ORDER BY publish_on,blogid ASC limit 5";
+										$latestQry = mysql_query($latestSql, $koneksi) or die ("Query products salah : ".mysql_error());
+
+							
+										while ($latestRow = mysql_fetch_array($latestQry)) {
+											echo "<a href=\"blog_detail.php?Kode=".$latestRow['blogid']."\">".$latestRow['title']."</a>";
+											echo "<br>";
+										}
+									?>
+									<hr>
+									
+									<br>
+									
+									<h3>Categories</h3>
+									<hr>                                    
+									<?php
+										$categorySql = "SELECT * FROM blog group by category ASC";
+										$categoryQry = mysql_query($categorySql, $koneksi) or die ("Query products salah : ".mysql_error());
+							
+										while ($categoryRow = mysql_fetch_array($categoryQry)) {
+											echo "<a href=\"blog.php?category=".$categoryRow['category']."\">".$categoryRow['category']."</a>";
+											echo "<br>";
+										}
+									?>
+									<hr>
+									
+									<br>
+									
+									<h3>Archives</h3>
+									<hr>
+									<?php
+										$tahun = 0;
+										$bulan = 0;
+										$arcSql = "SELECT YEAR(publish_on) AS yr, MONTH(publish_on) AS mnth, DATE_FORMAT(publish_on,'%M') AS mnth2 FROM blog GROUP BY YEAR(publish_on),MONTH(publish_on) ORDER BY yr,mnth DESC;";
+										$arcQry = mysql_query($arcSql, $koneksi) or die ("Query products salah : ".mysql_error());
+										
+										while ($latestRow = mysql_fetch_array($latestQry)) {
+											echo "<a href=\"blog_detail.php?Kode=".$latestRow['blogid']."\">".$latestRow['title']."</a>";
+											echo "<br>";
+										}
+									?>
+									<hr>
+											
+									<br>
+											
+									<h3>Categories</h3>
+									<hr>
+										<?php
+											$categorySql = "SELECT * FROM blog group by category ASC";
+											$categoryQry = mysql_query($categorySql, $koneksi) or die ("Query products salah : ".mysql_error());
+								
+											while ($categoryRow = mysql_fetch_array($categoryQry)) {
+												echo "<a href=\"blog.php?category=".$categoryRow['category']."\">".$categoryRow['category']."</a>";
+												echo "<br>";
+											}
+										?>
+									<hr>
+											
+									<br>
+									
+									<h3>Archives</h3>
+									<hr>                                    
+										<?php
+											$tahun = 0;
+											$bulan = 0;
+											$arcSql = "SELECT YEAR(publish_on) AS yr, MONTH(publish_on) AS mnth, DATE_FORMAT(publish_on,'%M') AS mnth2 FROM blog GROUP BY YEAR(publish_on),MONTH(publish_on) ORDER BY yr,mnth DESC;";
+											$arcQry = mysql_query($arcSql, $koneksi) or die ("Query products salah : ".mysql_error());
+											
+											echo "<ul class=\"archive\">";
+											while ($arcRow = mysql_fetch_array($arcQry)) {
+												if ($tahun == $arcRow['yr']) {
+													if($bulan != $arcRow['mnth']) {
+														$bulan = $arcRow['mnth'];
+														echo "<li><a href=\"blog.php?year=".$arcRow['yr']."&month=".$arcRow['mnth']."\">".$arcRow['mnth2']."</a></li>";
+													}
+												} else {
+													$tahun = $arcRow['yr'];
+													echo "<a href=\"blog.php?year=".$arcRow['yr']."\">".$arcRow['yr']."</a>";
+
+													$bulan = $arcRow['mnth'];
+													echo "<li><a href=\"blog.php?year=".$arcRow['yr']."&month=".$arcRow['mnth']."\">".$arcRow['mnth2']."</a></li>";
+												}
+											}
+											echo "</ul>";
+										?>
+									<hr>
+								</div>
+							</div>
 						</div>
 					</div>
 
+					<div class="row text-center" id="reg_newsletter">
+						<h3><b>Sign up to our email newsletter</b></h3> 
+						<p>to get the latest news about fingertechnology</p>
+						<a class="iframe2" href="subscribe.php" data-group="sub" title="">
+							<button>Subscribe Now!</button>
+						</a>
 					</div>
-				</div>
-
-                <div class="clearfix"></div>
-                <div class="row text-center" id="reg_newsletter">
-               		<h3><b>Sign Up to our Email Newsletter</b></h3> 
-               		
-                	<p>to get the latest news about fingertechnology</p>
-                	
-                	
-                	<a class="iframe2" href="subscribe.php" data-group="sub" title="">
-				    	<button>Subscribe Now!</button>
-				    </a>
-                </div>
-            </div><!-- /.container -->
-        </div> <!-- /.product-portfolio -->
-                    
+				</div><!-- /.container -->
+			</div> <!-- /.product-portfolio -->
                
         <div class="templatemo-footer" >
             <div class="container">
@@ -497,31 +513,32 @@
                             <ul class="list-inline">
                                 <li>
                                     <a href="https://www.facebook.com/Fingertechnology" target="_blank">
-                                        <span class="social-icon-fb"></span>
+                                        <span class="social-icon-fb"/>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://www.twitter.com/Fingertechnology" target="_blank">
-                                        <span class="social-icon-twitter"></span>
+                                        <span class="social-icon-twitter"/>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://www.linkedin.com/" target="_blank">
-                                        <span class="social-icon-linkedin"></span>
+                                        <span class="social-icon-linkedin"/>
                                     </a>
                                 </li>
                             </ul>
                             <div class="height30"></div>
-                            	<a class="btn btn-lg btn-orange" href="#" role="button" id="btn-back-to-top">Back To Top</a>
-                            <div class="height30"></div>
+                            	<a class="btn btn-lg btn-orange" href="#" role="button">Back To Top</a>
                         </div>
-                        <div class="footer_bottom_content">Copyright © 2014 <a href="#">FingerTechnology</a></div>
                         
+						<div class="footer_bottom_content">
+							Copyright © 2014 <a href="#">FingerTechnology</a>
+						</div>
                     </div>
                 </div>
             </div>
         </div>
-		<!--<script src="colorbox_appspro/js/jquery.min_1.js"></script>-->
+		
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="js/jquery.min.js" type="text/javascript"></script>
         <script src="js/bootstrap.min.js"  type="text/javascript"></script>
@@ -539,12 +556,9 @@
 			});
 		</script>
 		<script type='text/javascript' src='colorbox_appspro/js/shortcodes.typography.js?ver=4.0'></script>
-<script type='text/javascript' src='colorbox_appspro/js/shortcodes.elements.js?ver=4.0'></script>
-<script type='text/javascript' src='colorbox_appspro/js/shortcodes.template.js?ver=4.0'></script>
-<script src="colorbox_appspro/js/jquery.colorbox_1.js"></script>
-</div>
+		<script type='text/javascript' src='colorbox_appspro/js/shortcodes.elements.js?ver=4.0'></script>
+		<script type='text/javascript' src='colorbox_appspro/js/shortcodes.template.js?ver=4.0'></script>
+		<script src="colorbox_appspro/js/jquery.colorbox_1.js"></script>
+	</body>
+<!-- </div> -->
 </html>
-<!-- 
-    Free Responsive Template from templatemo
-    http://www.templatemo.com
--->

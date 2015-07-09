@@ -241,12 +241,7 @@
                     <div class="container">
 						
 						<div class="navbar-header">
-                                <!-- Logo Fingertech -->
-								<a class="navbar-brand" href="http://fingertechnology.mobi" rel="nofollow">
-									<img src="images/logo3.jpg" alt="logo"/>
-								</a>
-                                
-								<!-- Bundle menu-menu -->
+							<!-- Bundle menu-menu -->
 								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 									<span class="sr-only">Toggle navigation</span>
 									<!-- Menambahkan jumlah garis pada saat navbar-toggle aktif -->
@@ -254,10 +249,20 @@
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
                                 </button>
+
+								<a href="http://fingertechnology.mobi" rel="nofollow" >
+									<img src="images/logo3.jpg"  style = "margin-top:8% ; width : 80% " alt="logo"/>
+								</a>
+
+                                <!-- Logo Fingertech -->
+								<!--a class="navbar-brand" href="http://fingertechnology.mobi" rel="nofollow">
+									<img src="images/logo3.jpg" style="width:80%" alt="logo"/>
+								</a-->
+                                
                         </div>
 						
                         <div class="navbar-collapse collapse" id="templatemo-nav-bar">
-                            <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;margin-right:75px;">
+                            <ul class="nav navbar-nav navbar-left" style="margin-top: 40px;">
                                 <li><a href="#templatemo-top"><strong>HOME</strong></a></li>
                                 <li><a href="#templatemo-welcome"><strong>ABOUT</strong></a></li>
                                 <li><a href="#templatemo-products"><strong>PRODUCTS</strong></a></li>
