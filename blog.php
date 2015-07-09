@@ -4,7 +4,6 @@
 ?>
 <html lang="en">
     <head>
-		
         <title>FingerTech | Simplify Your Business</title>
 		<link href="images/logo_2.png" rel="shortcut icon"></link>
         <meta name="keywords" content="mobile, mobile dev, developers, mobile developers, carrer, informatika" />
@@ -12,7 +11,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <!--<link rel="shortcut icon" href="PUT YOUR FAVICON HERE">--> 
         
         <!-- Google Web Font Embed -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
@@ -34,11 +32,6 @@
         
 		<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
 		
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
         <style type="text/css">
 			#gkTab-392 .gkTabContainer0, #gkTab-392 .gkTabContainer1, #gkTab-392 .gkTabContainer2{
 				height: 300px;
@@ -103,46 +96,25 @@
 			h2.tabTitle { color: #a6a6a6!important; font-size: 56px; line-height: 52px !important; margin: 0 0 26px; }
 			h2.tabTitle span { color: #4da8e6!important; }
   		</style>
+		
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script>
+		
+		<script>
 			$(document).ready(function(){
 			  $("#btn1").hover(function(){
 				document.getElementById("des").hidden=true;
 				document.getElementById("mb").hidden=false;
 				document.getElementById("wd").hidden=true;
-//				ajax("tet1x","mb.php");
-//				document.getElementById("tet1x").innerHTML="Mobile";
-				//var x=document.getElementById("txtTitle1");
-//				var y=document.getElementById("txtContent1");
-//				$("#t1").addClass("gkTab-1");
-//				$("#t1").removeClass("gkTab-2");
-//				$("#t1").removeClass("gkTab-3");
-//				$("#tet1").text(x.value);
-//				$("#test1").text(y.value);
 			  });
 			  $("#btn2").hover(function(){
 				document.getElementById("des").hidden=false;
 				document.getElementById("mb").hidden=true;
 				document.getElementById("wd").hidden=true;
-//				var x1=document.getElementById("txtTitle2");
-//				var y1=document.getElementById("txtContent2");
-//				$("#t1").addClass("gkTab-2");
-//				$("#t1").removeClass("gkTab-1");
-//				$("#t1").removeClass("gkTab-3");
-//				$("#tet1").text(x1.value);
-//				$("#test1").text(y1.value);
 			  });
 			  $("#btn3").hover(function(){
 				document.getElementById("des").hidden=true;
 				document.getElementById("mb").hidden=true;
 				document.getElementById("wd").hidden=false;
-//				var x1=document.getElementById("txtTitle3");
-//				var y1=document.getElementById("txtContent3");
-//				$("#t1").addClass("gkTab-3");
-//				$("#t1").removeClass("gkTab-2");
-//				$("#t1").removeClass("gkTab-1");
-//				$("#tet1").text(x1.value);
-//				$("#test1").text(y1.value);
 			  });
 			});
 			function ajax(spanID,address)
@@ -164,105 +136,101 @@
 			xmlhttp.send();
 			}
 		</script>
+		
 		<link rel="stylesheet" href="colorbox_appspro/css/normalize.css" />
-	<link rel="stylesheet" href="colorbox_appspro/css/template.css" />
-	<link rel="stylesheet" href="colorbox_appspro/css/wp.css" />
-	<link rel="stylesheet" href="colorbox_appspro/css/extensions.css" />
+		<link rel="stylesheet" href="colorbox_appspro/css/template.css" />
+		<link rel="stylesheet" href="colorbox_appspro/css/wp.css" />
+		<link rel="stylesheet" href="colorbox_appspro/css/extensions.css" />
 	
-<script type='text/javascript' src='colorbox_appspro/js/jquery.js?ver=1.11.1'></script>
-<script type='text/javascript' src='colorbox_appspro/js/jquery-migrate.min.js?ver=1.2.1'></script>
-<script type='text/javascript' src='colorbox_appspro/js/nsp.js?ver=4.0'></script>
-<script type='text/javascript' src='colorbox_appspro/js/tabs.js?ver=4.0'></script>
-
+		<script type='text/javascript' src='colorbox_appspro/js/jquery.js?ver=1.11.1'></script>
+		<script type='text/javascript' src='colorbox_appspro/js/jquery-migrate.min.js?ver=1.2.1'></script>
+		<script type='text/javascript' src='colorbox_appspro/js/nsp.js?ver=4.0'></script>
+		<script type='text/javascript' src='colorbox_appspro/js/tabs.js?ver=4.0'></script>
 	
-	<link href="colorbox_appspro/css/shortcodes.typography.css" rel="stylesheet" type="text/css" /><link href="colorbox_appspro/css/shortcodes.elements.css" rel="stylesheet" type="text/css" /><link href="colorbox_appspro/css/shortcodes.template.css" rel="stylesheet" type="text/css" />	<link href="colorbox_appspro/css/style1.css" rel="stylesheet" type="text/css" />		
+		<link href="colorbox_appspro/css/shortcodes.typography.css" rel="stylesheet" type="text/css" /><link href="colorbox_appspro/css/shortcodes.elements.css" rel="stylesheet" type="text/css" /><link href="colorbox_appspro/css/shortcodes.template.css" rel="stylesheet" type="text/css" />	<link href="colorbox_appspro/css/style1.css" rel="stylesheet" type="text/css" />		
 	
-		
+		<style type="text/css">
+			.gk-page { max-width: 980px; }
+				#gk-mainbody-columns > section { width: 100%; }
+		</style>
+
+		<link rel="stylesheet" href="colorbox_appspro/css/tablet.css" media="(max-width: 920px)" />
+		<link rel="stylesheet" href="colorbox_appspro/css/mobile.css" media="(max-width: 580px)" />
+
+		<style type="text/css">
+			@media (max-width: 970px ) {
+				.box.big-tabs .gk-arrow { display: none!important; } 
+			}
+			
+			@media (max-width: 970px ) and (min-width: 921px ) {
+			.box.big-tabs .gk-tabs-wrap > ol li { margin: 0 35px 74px 40px !important; }
+			}
+
+			input[type="button"], button
+			{
+				margin:0;
+				padding:0 10px;
+				height: 32px;
+				background-color: #D3D3D3;
+				color:#000;
+			}
+
+			input[type="button"]:hover
+			{
+				
+			}
+
+			h3 {
+				color: #000;
+			}
+
+
+			input[type="text"]
+			{
+				box-shadow:none;
+			}
+		</style>
 	
-<style type="text/css">
-	.gk-page { max-width: 980px; }
-		#gk-mainbody-columns > section { width: 100%; }
-	</style>
-
-<link rel="stylesheet" href="colorbox_appspro/css/tablet.css" media="(max-width: 920px)" />
-
-<link rel="stylesheet" href="colorbox_appspro/css/mobile.css" media="(max-width: 580px)" />
-
-<style type="text/css">
-	@media (max-width: 970px ) {
-		.box.big-tabs .gk-arrow { display: none!important; } 
-	}
+		<script src="http://masonry.desandro.com/masonry.pkgd.js"></script>
+		<script src="https://rawgithub.com/desandro/classie/master/classie.js"></script>
 	
-	@media (max-width: 970px ) and (min-width: 921px ) {
-	.box.big-tabs .gk-tabs-wrap > ol li { margin: 0 35px 74px 40px !important; }
-	}
+		<script>
+			docReady( function() {
 
-	input[type="button"], button
-	{
-		margin:0;
-		padding:0 10px;
-		height: 32px;
-		background-color: #D3D3D3;
-		color:#000;
-	}
+			  var container = document.querySelector('.masonry');
+			  var msnry = new Masonry( container, {
+				columnWidth: 60;
+			  });
 
-	input[type="button"]:hover
-	{
-		
-	}
+			  
 
-	h3 {
-		color: #000;
-	}
-
-
-	input[type="text"]
-	{
-		box-shadow:none;
-	}
-
-</style>
-	
-
-<script src="http://masonry.desandro.com/masonry.pkgd.js"></script>	
-<script src="https://rawgithub.com/desandro/classie/master/classie.js"></script>	
-	<script>
-docReady( function() {
-
-  var container = document.querySelector('.masonry');
-  var msnry = new Masonry( container, {
-    columnWidth: 60;
-  });
-
-  
-
-});
-</script>
+			});
+		</script>
 		
 		<script type="text/javascript">
-		var thickboxL10n = {
-			"next":"Next >",
-			"prev":"< Prev",
-			"image":"Image",
-			"of":"of",
-			"close":"Close",
-			"noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.",
-			"loadingAnimation":"http://www.gavick.com/demo/wordpress/appsprotech/wp-includes/js/thickbox/loadingAnimation.gif",
-			"closeImage":"http://www.gavick.com/demo/wordpress/appsprotech/wp-includes/js/thickbox/tb-close.png"
-		};
-	</script>
-	<link rel="stylesheet" href="colorbox_appspro/js/thickbox.css" media="all" />
-	<script type="text/javascript" src="colorbox_appspro/js/thickbox.js"></script>
-		<script type="text/javascript" src="colorbox_appspro/js/gk.scripts.js"></script>
-	<script type="text/javascript" src="colorbox_appspro/js/gk.menu.js"></script>
-	
+			var thickboxL10n = {
+				"next":"Next >",
+				"prev":"< Prev",
+				"image":"Image",
+				"of":"of",
+				"close":"Close",
+				"noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.",
+				"loadingAnimation":"http://www.gavick.com/demo/wordpress/appsprotech/wp-includes/js/thickbox/loadingAnimation.gif",
+				"closeImage":"http://www.gavick.com/demo/wordpress/appsprotech/wp-includes/js/thickbox/tb-close.png"
+			};
+		</script>
 		
-<style>
+		<link rel="stylesheet" href="colorbox_appspro/js/thickbox.css" media="all" />
+		<script type="text/javascript" src="colorbox_appspro/js/thickbox.js"></script>
+		<script type="text/javascript" src="colorbox_appspro/js/gk.scripts.js"></script>
+		<script type="text/javascript" src="colorbox_appspro/js/gk.menu.js"></script>
+		
+		<style>
 			body{font:12px/1.2 Verdana, sans-serif;}
 			a:link, a:visited{text-decoration:none; color:#416CE5;}
 			h2{font-size:135%; margin:15px 0 0 0;}
-		
 		</style>
+		
 		<link rel="stylesheet" href="colorbox_appspro/css/colorbox_1.css" />
 		
 		<script>
@@ -299,46 +267,51 @@ docReady( function() {
 				});
 			});
 		</script>
-		
     </head>
     
     <body class="home blog custom-background" data-tablet-width="920">
-       <div class="templatemo-top-bar" id="templatemo-top">
+		<!-- Menambahkan space kosong di atas static menu -->
+		<!-- <div class="templatemo-top-bar" id="templatemo-top">
            <div class="container">
-                <div class="subheader">
-                    
-                </div>
+                <div class="subheader"></div>
             </div>
-        </div>
+        </div> -->
+		
         <div class="templatemo-top-menu" >
             <div class="container">
-                <!-- Static navbar -->
+				<!-- Static navbar -->
                 <div class="navbar navbar-default" role="navigation">
                     <div class="container">
-                        <div class="navbar-header">
-                                <a class="navbar-brand" href="http://fingertechnology.mobi" rel="nofollow"><img src="images/logo3.jpg" alt="logo" /></a>
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                </button>
+						
+						<div class="navbar-header">
+                                <!-- Logo Fingertech -->
+								<a class="navbar-brand" href="http://fingertechnology.mobi" rel="nofollow">
+									<img src="images/logo3.jpg" alt="logo"/>
+								</a>
                                 
+								<!-- Bundle menu-menu -->
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+									<span class="sr-only">Toggle navigation</span>
+									<!-- Menambahkan jumlah garis pada saat navbar-toggle aktif -->
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+                                </button>
                         </div>
+						
                         <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;margin-right:75px;">
-                                <li><a href="index.php#templatemo-top" class="external-link"><strong>HOME</strong></a></li>
-                                <li><a href="index.php#templatemo-welcome" class="external-link"><strong>ABOUT</strong></a></li>
-                                <li><a href="index.php#templatemo-products" class="external-link"><strong>PRODUCTS</strong></a></li>
-                                <li><a href="index.php#templatemo-about" class="external-link"><strong>SERVICES</strong></a></li>
-                                <li><a href="index.php#templatemo-career" class="external-link"><strong>CAREER</strong></a></li>
-                                <li><a href="index.php#templatemo-contact" class="external-link"><strong>CONTACT</strong></a></li>
-                            <!--</ul>
-							<ul class="nav navbar-na navbar-right" style="margin-top:-39px;float:right;margin-left:100px;">-->
-							<li><a href="" style="background-color: #16c5fe;color:#fff;"><strong>BLOG</strong></a></li>
+                                <li><a href="#templatemo-top"><strong>HOME</strong></a></li>
+                                <li><a href="#templatemo-welcome"><strong>ABOUT</strong></a></li>
+                                <li><a href="#templatemo-products"><strong>PRODUCTS</strong></a></li>
+                                <li><a href="#templatemo-about"><strong>SERVICES</strong></a></li>
+                                <li><a href="#templatemo-career"><strong>CAREER</strong></a></li>
+                                <li><a href="#templatemo-contact"><strong>CONTACT</strong></a></li>
+                            	<li><a href="blog.php" class="external-link"><strong>BLOG</strong></a></li>
 							</ul>
-                        </div><!--/.nav-collapse -->
-                    </div><!--/.container-fluid -->
+                        </div>
+                    
+					</div><!--/.container-fluid -->
                 </div><!--/.navbar -->
             </div> <!-- /container -->
         </div>
@@ -346,15 +319,8 @@ docReady( function() {
         <div id="templatemo-products" ><!-- /.product- -->
             <div class="container">
                 <div class="row">
-                    <!--div class="templatemo-line-header" >
-                        <div class="text-center">
-                            <hr class="team_hr team_hr_left hr_gray"/><span class="txt_darkgrey">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BLOGS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                            <hr class="team_hr team_hr_right hr_gray" />
-                        </div>
-                    </div-->
                     <div class="text-center tag-head">
                             <hr class="team_hr2 team_hr_left2 hr_gray"/>
-                            <!--span class="txt_darkgrey">CONTACT US</span-->	
                             <div class="txt_dark text-center">BLOGS</div>
                             <hr class="team_hr2 team_hr_right2 hr_gray"/>
                             <div class="clearfix"></div>
@@ -364,9 +330,7 @@ docReady( function() {
                     </div>
                 </div> <!-- /.row -->
 
-
-                <div class="clearfix"></div>
-                
+                <div class="clearfix"></div>                
                 
 	            <div class="text-right" id="search_container">
 	            	<form role="form" method="post" name="frmsearch" target="_self" id="frmsearch" enctype="multipart/form-data">
@@ -377,7 +341,6 @@ docReady( function() {
 				
 	            <div style="position:relative;">
 					<div class="masonry">
-
 
 					<?php
                     	$number = 1;
