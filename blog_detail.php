@@ -332,278 +332,250 @@
                             <hr class="team_hr2 team_hr_right2 hr_gray"/>
                             <div class="clearfix"></div>
                         </div>
-                    <div class="clearfix"></div>
-                    <div class="templatemo-gallery-category" style="font-size:16px; margin-top:10px;">
-                    </div>
-                </div> <!-- /.row -->
-
-
-                <div class="clearfix"></div>
-                
+                </div> <!-- /.row -->              
                 
 	            <div class="text-right" style="margin-right:20px;" id="search_container">
 	            	<form role="form" action="blog.php" method="post" name="frmsearch" target="_self" id="frmsearch" enctype="multipart/form-data">
-	            	<input type="text" name="search" id="search" size="50" placeholder="Search" value="<?php if(isset($_POST['search'])) echo $_POST['search']; ?>" />
-	            	<button class="plus" type="submit">+</button>
+						<input type="text" name="search" id="search" size="50" placeholder="Search" value="<?php if(isset($_POST['search'])) echo $_POST['search']; ?>" />
+						<button class="plus" type="submit">+</button>
 	            	</form>
 	            </div>
 				
 	            <?php
-                   	if(isset($_GET['Kode'])){
-                   		if(isset($_GET['category'])){
-                   				$blogSql = "SELECT * FROM blog where category ='".$_GET['period']."' ORDER BY publish_on,blogid ASC";
-                    		}
-                   		else if(isset($_GET['period'])){
-
-                    		}
+                   	if(isset($_GET['Kode'])) {
+                   		if(isset($_GET['category'])) {
+							$blogSql = "SELECT * FROM blog where category ='".$_GET['period']."' ORDER BY publish_on,blogid ASC";
+						} else if(isset($_GET['period'])) {}
                    		else {
                    			$blogSql = "SELECT * FROM blog where blogid=".$_GET['Kode'];
                   		}
-                   	}
-                   	else if (isset($_POST['search'])) {
+                   	} else if (isset($_POST['search'])) {
                    		$blogSql = "SELECT * FROM blog where title like '%".$_POST['search']."%' ORDER BY publish_on,blogid ASC";
-                   	}
-                   	else {
+                   	} else {
 						$blogSql = "SELECT * FROM blog ORDER BY publish_on,blogid ASC";
 					}
 					$blogQry = mysql_query($blogSql, $koneksi) or die ("Query products salah : ".mysql_error());
 					
-
-					if(isset($_GET['Kode'])){
-					?>
+					if(isset($_GET['Kode'])) {
+				?>
+				
 						<div class="row content" style="margin-top:30px;">
 			            	<div class="col-sm-8" id="left_content">
 			            		<?php 
-			            		while ($blogRow = mysql_fetch_array($blogQry)) {
-		            				echo "<img src=\"images/blog/".$blogRow['image_name']."\" width=\"100%\">";
-		            				
-		            				echo "<div style=\"background-color:white;margin-top:20px;padding:10px 20px;\">";
-		            				echo "<p style=\"font-size:23px;margin-bottom:10px;\"><b>".$blogRow['title']."</b></p>";
-									echo "<hr>";
-									echo "<p class=\"blogcontent\">".nl2br($blogRow['content'])."</p>";
-
-									echo "<a href=\"blog.php\">&lt Back to blogs</a>";
-									echo "<div class=\"comment\">";
-									echo "<p><b>Leave a Reply</b></p>";
-									echo "<hr>";
-
-									echo "<form role=\"form\" action=\"?page=blog_detail&Kode=".$_GET['Kode']."\" method=\"post\" name=\"frmcomment\" target=\"_self\" id=\"frmcomment\" enctype=\"multipart/form-data\">";
-									
-									if(isset($_POST['btnSave'])) {
-										$message = '';
-										if (trim($_POST['name'])=="") {
-											$message = $message."Name can't be empty !<br>";		
-										}
-										if (trim($_POST['email'])=="") {
-											$message = $message."Email can't be empty !<br>";			
-										}else if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
-												$message = $message."Email is not valid !<br>";
-										}
-										if (trim($_POST['comment'])=="") {
-											$message = $message."Comment can't be empty !<br>";
-										}
+									while ($blogRow = mysql_fetch_array($blogQry)) {
+										echo "<img src=\"images/blog/".$blogRow['image_name']."\" width=\"100%\">";
 										
-										# Baca Variabel Form
-										$txtid 		= $_POST['bid'];
-										$txtname	= $_POST['name'];
-										$txtname	= str_replace("'","&acute;",$txtname);
-										$txtemail	= $_POST['email'];
-										$txtemail	= str_replace("'","&acute;",$txtemail);
+										echo "<div style=\"background-color:white;margin-top:20px;padding:10px 20px;\">";
+										echo "<p style=\"font-size:23px;margin-bottom:10px;\"><b>".$blogRow['title']."</b></p>";
+										echo "<hr>";
+										echo "<p class=\"blogcontent\">".nl2br($blogRow['content'])."</p>";
 
-										$txtcomment	= $_POST['comment'];
-										$txtcomment	= str_replace("'","&acute;",$txtcomment);
-										$txtwebsite	= $_POST['website'];
-										$txtwebsite	= str_replace("'","&acute;",$txtwebsite);
+										echo "<a href=\"blog.php\">&lt Back to blogs</a>";
+										echo "<div class=\"comment\">";
+										echo "<p><b>Leave a Reply</b></p>";
+										echo "<hr>";
 
-
-										//echo "<p style=\"border:#000 solid 1px;\">";
-										//echo "Thanks for your comment.";
-										//echo "</p>";
-
-										// JIKA ADA PESAN ERROR DARI VALIDASI
-										// (Form Kosong, atau Duplikat ada), Ditampilkan lewat kode ini
-										if (! trim($message) == "" ){
-								            echo "<div class='msgBoxBad'>";
-											echo $message; 
-											echo "</div>"; 
-										}else {
-											# TIDAK ADA ERROR, Jika jumlah error message tidak ada, simpan datanya
-											# SIMPAN DATA KE DATABASE
-											$qrySave=mysql_query("INSERT INTO blogcomment SET blogid='$txtid', name='$txtname', email='$txtemail', website='$txtwebsite', comment='$txtcomment'") or die ("Gagal query".mysql_error());
-											if($qrySave){
+										echo "<form role=\"form\" action=\"?page=blog_detail&Kode=".$_GET['Kode']."\" method=\"post\" name=\"frmcomment\" target=\"_self\" id=\"frmcomment\" enctype=\"multipart/form-data\">";
+										
+										if(isset($_POST['btnSave'])) {
+											$message = '';
+											if (trim($_POST['name'])=="") {
+												$message = $message."Name can't be empty !<br>";		
 											}
+											
+											if (trim($_POST['email'])=="") {
+												$message = $message."Email can't be empty !<br>";			
+											} else if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+													$message = $message."Email is not valid !<br>";
+											}
+											
+											if (trim($_POST['comment'])=="") {
+												$message = $message."Comment can't be empty !<br>";
+											}
+											
+											# Baca Variabel Form
+											$txtid 		= $_POST['bid'];
+											$txtname	= $_POST['name'];
+											$txtname	= str_replace("'","&acute;",$txtname);
+											$txtemail	= $_POST['email'];
+											$txtemail	= str_replace("'","&acute;",$txtemail);
 
-											echo "<div class='msgBoxGood'>";
-											echo "Thanks for your comment."; 
-											echo "</div>"; 
+											$txtcomment	= $_POST['comment'];
+											$txtcomment	= str_replace("'","&acute;",$txtcomment);
+											$txtwebsite	= $_POST['website'];
+											$txtwebsite	= str_replace("'","&acute;",$txtwebsite);
+
+											//echo "<p style=\"border:#000 solid 1px;\">";
+											//echo "Thanks for your comment.";
+											//echo "</p>";
+
+											// JIKA ADA PESAN ERROR DARI VALIDASI
+											// (Form Kosong, atau Duplikat ada), Ditampilkan lewat kode ini
+											if (! trim($message) == "" ){
+												echo "<div class='msgBoxBad'>";
+												echo $message; 
+												echo "</div>"; 
+											} else {
+												# TIDAK ADA ERROR, Jika jumlah error message tidak ada, simpan datanya
+												# SIMPAN DATA KE DATABASE
+												$qrySave=mysql_query("INSERT INTO blogcomment SET blogid='$txtid', name='$txtname', email='$txtemail', website='$txtwebsite', comment='$txtcomment'") or die ("Gagal query".mysql_error());
+												if($qrySave){}
+
+												echo "<div class='msgBoxGood'>";
+												echo "Thanks for your comment."; 
+												echo "</div>"; 
+											}
 										}
+
+										# MASUKKAN DATA KE VARIABEL
+										$txtname	= isset($_POST['name']) ? $_POST['name'] : '';
+										$txtemail	= isset($_POST['email']) ? $_POST['email'] : '';
+										$txtwebsite	= isset($_POST['website']) ? $_POST['website'] : '';
+										$txtcomment	= isset($_POST['comment']) ? $_POST['comment'] : '';
+
+										echo "<div class=\"form-group\">";
+										echo "<label>Name (required)</label>";
+										echo "<input name=\"name\" type=\"text\" class=\"form-control\" value=\"".$txtname."\" />";
+										echo "<input name=\"bid\" type=\"hidden\" class=\"form-control\" value=\"".$_GET['Kode']."\"/>";
+										echo "</div>";
+
+										echo "<div class=\"form-group\">";
+										echo "<label>Email (will not be published)(required)</label>";
+										echo "<input name=\"email\" type=\"text\" class=\"form-control\" value=\"".$txtemail."\"/>";
+										echo "</div>";
+
+										echo "<div class=\"form-group\">";
+										echo "<label>Website</label>";
+										echo "<input name=\"website\" type=\"text\" class=\"form-control\" value=\"".$txtwebsite."\" />";
+										echo "</div>";
+
+										echo "<div class=\"form-group\">";
+										echo "<label>Comment</label>";
+										echo "<textarea name=\"comment\" class=\"form-control\" rows=\"3\">".$txtcomment." </textarea>";
+										echo "</div>";
+
+										echo "<button class=\"btn-flat\" name=\"btnSave\" type=\"submit\" style=\"cursor:pointer;\">Submit Comment</button>";
+
+										echo "</form>";
+
+										echo "</div>";
+
+										echo "</div>";
 									}
-
-									# MASUKKAN DATA KE VARIABEL
-									$txtname	= isset($_POST['name']) ? $_POST['name'] : '';
-									$txtemail	= isset($_POST['email']) ? $_POST['email'] : '';
-									$txtwebsite	= isset($_POST['website']) ? $_POST['website'] : '';
-									$txtcomment	= isset($_POST['comment']) ? $_POST['comment'] : '';
-
-									echo "<div class=\"form-group\">";
-                                    echo "<label>Name (required)</label>";
-									echo "<input name=\"name\" type=\"text\" class=\"form-control\" value=\"".$txtname."\" />";
-									echo "<input name=\"bid\" type=\"hidden\" class=\"form-control\" value=\"".$_GET['Kode']."\"/>";
-									echo "</div>";
-
-									echo "<div class=\"form-group\">";
-                                    echo "<label>Email (will not be published)(required)</label>";
-									echo "<input name=\"email\" type=\"text\" class=\"form-control\" value=\"".$txtemail."\"/>";
-									echo "</div>";
-									
-
-									echo "<div class=\"form-group\">";
-                                    echo "<label>Website</label>";
-									echo "<input name=\"website\" type=\"text\" class=\"form-control\" value=\"".$txtwebsite."\" />";
-									echo "</div>";
-									
-
-									echo "<div class=\"form-group\">";
-                                    echo "<label>Comment</label>";
-                                    echo "<textarea name=\"comment\" class=\"form-control\" rows=\"3\">".$txtcomment." </textarea>";
-                                    echo "</div>";
-
-                                    echo "<button class=\"btn-flat\" name=\"btnSave\" type=\"submit\" style=\"cursor:pointer;\">Submit Comment</button>";
-
-                                    echo "</form>";
-
-                                    echo "</div>";
-
-									echo "</div>";
-		            			}
 		            			?>
-
-
 		            		</div>
+							
 		            		<div class="col-sm-4" id="right_content">
 		            			<div style="background-color:white;margin-bottom:5px;padding:20px 20px;">
 			            			<h3>Latest Blogs</h3>
 	                                <hr>                                    
-	                                <?php
-	                                $latestSql = "SELECT * FROM blog ORDER BY publish_on,blogid ASC limit 5";
-									$latestQry = mysql_query($latestSql, $koneksi) or die ("Query products salah : ".mysql_error());
-						
-									while ($latestRow = mysql_fetch_array($latestQry)) {
-										echo "<a href=\"blog_detail.php?Kode=".$latestRow['blogid']."\">".$latestRow['title']."</a>";
-										echo "<br>";
-									}
-									?>
+										<?php
+											$latestSql = "SELECT * FROM blog ORDER BY publish_on,blogid ASC limit 5";
+											$latestQry = mysql_query($latestSql, $koneksi) or die ("Query products salah : ".mysql_error());
+								
+											while ($latestRow = mysql_fetch_array($latestQry)) {
+												echo "<a href=\"blog_detail.php?Kode=".$latestRow['blogid']."\">".$latestRow['title']."</a>";
+												echo "<br>";
+											}
+										?>
 	                                <hr>
+									
 	                                <br>
+									
 	                                <h3>Categories</h3>
 	                                <hr>                                    
-	                                <?php
-	                                $categorySql = "SELECT * FROM blog group by category ASC";
-									$categoryQry = mysql_query($categorySql, $koneksi) or die ("Query products salah : ".mysql_error());
-						
-									while ($categoryRow = mysql_fetch_array($categoryQry)) {
-										echo "<a href=\"blog.php?category=".$categoryRow['category']."\">".$categoryRow['category']."</a>";
-										echo "<br>";
-									}
-									?>
-
+										<?php
+											$categorySql = "SELECT * FROM blog group by category ASC";
+											$categoryQry = mysql_query($categorySql, $koneksi) or die ("Query products salah : ".mysql_error());
+								
+											while ($categoryRow = mysql_fetch_array($categoryQry)) {
+												echo "<a href=\"blog.php?category=".$categoryRow['category']."\">".$categoryRow['category']."</a>";
+												echo "<br>";
+											}
+										?>
 	                                <hr>
+									
 	                                <br>
+									
 	                                <h3>Archives</h3>
 	                                <hr>                                    
-	                                
-	                                <?php
-	                                $tahun = 0;
-	                                $bulan = 0;
-	                                $arcSql = "SELECT YEAR(publish_on) AS yr, MONTH(publish_on) AS mnth, DATE_FORMAT(publish_on,'%M') AS mnth2 FROM blog GROUP BY YEAR(publish_on),MONTH(publish_on) ORDER BY yr,mnth DESC;";
-									$arcQry = mysql_query($arcSql, $koneksi) or die ("Query products salah : ".mysql_error());
-									
-									echo "<ul class=\"archive\">";
-									while ($arcRow = mysql_fetch_array($arcQry)) {
-										
-										if ($tahun == $arcRow['yr']){
-											if($bulan != $arcRow['mnth']){
-												$bulan = $arcRow['mnth'];
-												echo "<li><a href=\"blog.php?year=".$arcRow['yr']."&month=".$arcRow['mnth']."\">".$arcRow['mnth2']."</a></li>";
+										<?php
+											$tahun = 0;
+											$bulan = 0;
+											$arcSql = "SELECT YEAR(publish_on) AS yr, MONTH(publish_on) AS mnth, DATE_FORMAT(publish_on,'%M') AS mnth2 FROM blog GROUP BY YEAR(publish_on),MONTH(publish_on) ORDER BY yr,mnth DESC;";
+											$arcQry = mysql_query($arcSql, $koneksi) or die ("Query products salah : ".mysql_error());
+											
+											echo "<ul class=\"archive\">";
+											while ($arcRow = mysql_fetch_array($arcQry)) {
+												
+												if ($tahun == $arcRow['yr']) {
+													if($bulan != $arcRow['mnth']) {
+														$bulan = $arcRow['mnth'];
+														echo "<li><a href=\"blog.php?year=".$arcRow['yr']."&month=".$arcRow['mnth']."\">".$arcRow['mnth2']."</a></li>";
+													}
+												} else {
+													$tahun = $arcRow['yr'];
+													echo "<a href=\"blog.php?year=".$arcRow['yr']."\">".$arcRow['yr']."</a>";
+
+													$bulan = $arcRow['mnth'];
+													echo "<li><a href=\"blog.php?year=".$arcRow['yr']."&month=".$arcRow['mnth']."\">".$arcRow['mnth2']."</a></li>";
+												}
 											}
-
-										}
-										else {
-											$tahun = $arcRow['yr'];
-											echo "<a href=\"blog.php?year=".$arcRow['yr']."\">".$arcRow['yr']."</a>";
-
-											$bulan = $arcRow['mnth'];
-											echo "<li><a href=\"blog.php?year=".$arcRow['yr']."&month=".$arcRow['mnth']."\">".$arcRow['mnth2']."</a></li>";
-										}
-										
-										
-									}
-									echo "</ul>";
-									?>
+											echo "</ul>";
+										?>
 	                                <hr>
                             	</div>
 		            		</div>
 	            		</div>
 					
-					<?php
+				<?php
+					} else {
+				?>
+						<div style="position:relative;left:50%;margin-left:-500px;">
+							<div class="masonry">
+								<?php
+									$number = 1;
+									while ($blogRow = mysql_fetch_array($blogQry)) {
+										if($number==1) {
+											echo "<div class=\"item w2 h2\">";
+											echo "<img src=\"images/blog/".$blogRow['image_name']."\" width=\"470px\">";
+											echo "<p><b>".$blogRow['title']."</b></p>";
+											
+											$line=$blogRow['content'];
+											if (preg_match('/^.{1,300}\b/s', $blogRow['content'], $match)) {
+												$line=$match[0];
+											}
+											echo "<p class=\"blogcontent\">".$line."</p>";
+										} else {
+											echo "<div class=\"item\">";
+											echo "<img src=\"images/blog/".$blogRow['image_name']."\" width=\"270px\">";
+											echo "<p><b>".$blogRow['title']."</b></p>";
+											
+											$line=$blogRow['content'];
+											if (preg_match('/^.{1,300}\b/s', $blogRow['content'], $match)) {
+												$line=$match[0];
+											}
+											echo "<p class=\"blogcontent\">".$line."</p>";
+										}
+										echo "<div style=\"border-bottom:1px solid #f0f0f0; margin:15px;\"></div>";
+										echo "<p class=\"viewmore\"><i><a href=\"blog_detail.php?Kode=".$blogRow['blogid']."\">view more..</a></i></p>";
+										echo "</div>";
+										$number++;
+									}
 					}
-					else {
-					?>
+								?>
+								</div>
+							</div>
 
-					<div style="position:relative;left:50%;margin-left:-500px;">
-						<div class="masonry">
-						<?php
-							$number = 1;
-							while ($blogRow = mysql_fetch_array($blogQry)) {
-								if($number==1){
-									echo "<div class=\"item w2 h2\">";
-									echo "<img src=\"images/blog/".$blogRow['image_name']."\" width=\"470px\">";
-									echo "<p><b>".$blogRow['title']."</b></p>";
-									
-									$line=$blogRow['content'];
-									if (preg_match('/^.{1,300}\b/s', $blogRow['content'], $match))
-									{
-									    $line=$match[0];
-									}
-									echo "<p class=\"blogcontent\">".$line."</p>";
-								}
-								else {
-									echo "<div class=\"item\">";
-									echo "<img src=\"images/blog/".$blogRow['image_name']."\" width=\"270px\">";
-									echo "<p><b>".$blogRow['title']."</b></p>";
-									
-									$line=$blogRow['content'];
-									if (preg_match('/^.{1,300}\b/s', $blogRow['content'], $match))
-									{
-									    $line=$match[0];
-									}
-									echo "<p class=\"blogcontent\">".$line."</p>";
-								}
-								echo "<div style=\"border-bottom:1px solid #f0f0f0; margin:15px;\"></div>";
-								echo "<p class=\"viewmore\"><i><a href=\"blog_detail.php?Kode=".$blogRow['blogid']."\">view more..</a></i></p>";
-								echo "</div>";
-								$number++;
-							}
-						}
-						?>
-						</div>
-					</div>
-
-
-	            
-
-				<div class="clearfix"></div>
-                <div class="row text-center" id="reg_newsletter">
-               		<h3><b>Sign Up to our Email Newsletter</b></h3> 
-               		
-                	<p>to get the latest news about fingertechnology</p>
-                	<a class="iframe2" href="subscribe.php" data-group="sub" title="">
-	                	<button>Subscribe Now!</button>
-	                </a>
-                </div>
-            </div><!-- /.container -->
-        </div> <!-- /.product-portfolio -->
-                    
+							<div class="row text-center" id="reg_newsletter">
+								<h3><b>Sign up to our rmail newsletter</b></h3> 
+								<p>to get the latest news about fingertechnology</p>
+								<a class="iframe2" href="subscribe.php" data-group="sub" title="">
+									<button>Subscribe Now!</button>
+								</a>
+							</div>
+						</div><!-- /.container -->
+        </div> <!-- /.product-portfolio -->             
                
         <div class="templatemo-footer" >
             <div class="container">
@@ -614,31 +586,32 @@
                             <ul class="list-inline">
                                 <li>
                                     <a href="https://www.facebook.com/Fingertechnology" target="_blank">
-                                        <span class="social-icon-fb"></span>
+                                        <span class="social-icon-fb"/>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://www.twitter.com/Fingertechnology" target="_blank">
-                                        <span class="social-icon-twitter"></span>
+                                        <span class="social-icon-twitter"/>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="https://www.linkedin.com/" target="_blank">
-                                        <span class="social-icon-linkedin"></span>
+                                        <span class="social-icon-linkedin"/>
                                     </a>
                                 </li>
                             </ul>
                             <div class="height30"></div>
-                            	<a class="btn btn-lg btn-orange" href="#" role="button" id="btn-back-to-top">Back To Top</a>
-                            <div class="height30"></div>
+                            	<a class="btn btn-lg btn-orange" href="#" role="button">Back To Top</a>
                         </div>
-                        <div class="footer_bottom_content">Copyright © 2014 <a href="#">FingerTechnology</a></div>
                         
+						<div class="footer_bottom_content">
+							Copyright © 2014 <a href="#">FingerTechnology</a>
+						</div>
                     </div>
                 </div>
             </div>
         </div>
-		<!--<script src="colorbox_appspro/js/jquery.min_1.js"></script>-->
+		
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="js/jquery.min.js" type="text/javascript"></script>
         <script src="js/bootstrap.min.js"  type="text/javascript"></script>
@@ -656,12 +629,9 @@
 			});
 		</script>
 		<script type='text/javascript' src='colorbox_appspro/js/shortcodes.typography.js?ver=4.0'></script>
-<script type='text/javascript' src='colorbox_appspro/js/shortcodes.elements.js?ver=4.0'></script>
-<script type='text/javascript' src='colorbox_appspro/js/shortcodes.template.js?ver=4.0'></script>
-<script src="colorbox_appspro/js/jquery.colorbox_1.js"></script>
-</div>
+		<script type='text/javascript' src='colorbox_appspro/js/shortcodes.elements.js?ver=4.0'></script>
+		<script type='text/javascript' src='colorbox_appspro/js/shortcodes.template.js?ver=4.0'></script>
+		<script src="colorbox_appspro/js/jquery.colorbox_1.js"></script>
+	</body>
+<!-- </div> -->
 </html>
-<!-- 
-    Free Responsive Template from templatemo
-    http://www.templatemo.com
--->
