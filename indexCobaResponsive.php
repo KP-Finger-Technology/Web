@@ -4,7 +4,7 @@
 ?>
 <html lang="en">
     <head>
-		
+		<!-- Segala import, link, dan meta-->
         <title>FingerTech | Simplify Your Business</title>
 		<link href="images/logo_2.png" rel="shortcut icon"></link>
         <meta name="keywords" content="mobile, mobile dev, developers, mobile developers, carrer, informatika" />
@@ -12,7 +12,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <!--<link rel="shortcut icon" href="PUT YOUR FAVICON HERE">--> 
         
         <!-- Google Web Font Embed -->
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
@@ -97,8 +96,11 @@
 			h2.tabTitle { color: #a6a6a6!important; font-size: 56px; line-height: 52px !important; margin: 0 0 26px; }
 			h2.tabTitle span { color: #4da8e6!important; }
   		</style>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script>
+        
+		<!-- Jquery -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+		<script>
 			$(document).ready(function(){
 			  $("#btn1").hover(function(){
 				document.getElementById("des").hidden=true;
@@ -135,59 +137,56 @@
 			xmlhttp.send();
 			}
 		</script>
+		
 		<link rel="stylesheet" href="colorbox_appspro/css/normalize.css" />
-	<link rel="stylesheet" href="colorbox_appspro/css/template.css" />
-	<link rel="stylesheet" href="colorbox_appspro/css/wp.css" />
-	<link rel="stylesheet" href="colorbox_appspro/css/extensions.css" />
-	
-<script type='text/javascript' src='colorbox_appspro/js/jquery.js?ver=1.11.1'></script>
-<script type='text/javascript' src='colorbox_appspro/js/jquery-migrate.min.js?ver=1.2.1'></script>
-<script type='text/javascript' src='colorbox_appspro/js/nsp.js?ver=4.0'></script>
-<script type='text/javascript' src='colorbox_appspro/js/tabs.js?ver=4.0'></script>
-
-	
-	<link href="colorbox_appspro/css/shortcodes.typography.css" rel="stylesheet" type="text/css" /><link href="colorbox_appspro/css/shortcodes.elements.css" rel="stylesheet" type="text/css" /><link href="colorbox_appspro/css/shortcodes.template.css" rel="stylesheet" type="text/css" />	<link href="colorbox_appspro/css/style1.css" rel="stylesheet" type="text/css" />		
-	
+		<link rel="stylesheet" href="colorbox_appspro/css/template.css" />
+		<link rel="stylesheet" href="colorbox_appspro/css/wp.css" />
+		<link rel="stylesheet" href="colorbox_appspro/css/extensions.css" />
 		
-	
-<style type="text/css">
-	.gk-page { max-width: 980px; }
-		#gk-mainbody-columns > section { width: 100%; }
-	</style>
+		<script type='text/javascript' src='colorbox_appspro/js/jquery.js?ver=1.11.1'></script>
+		<script type='text/javascript' src='colorbox_appspro/js/jquery-migrate.min.js?ver=1.2.1'></script>
+		<script type='text/javascript' src='colorbox_appspro/js/nsp.js?ver=4.0'></script>
+		<script type='text/javascript' src='colorbox_appspro/js/tabs.js?ver=4.0'></script>
 
-<link rel="stylesheet" href="colorbox_appspro/css/tablet.css" media="(max-width: 920px)" />
-
-<link rel="stylesheet" href="colorbox_appspro/css/mobile.css" media="(max-width: 580px)" />
-
-<style type="text/css">
-	@media (max-width: 970px ) {
-		.box.big-tabs .gk-arrow { display: none!important; } 
-	}
+		<link href="colorbox_appspro/css/shortcodes.typography.css" rel="stylesheet" type="text/css" /><link href="colorbox_appspro/css/shortcodes.elements.css" rel="stylesheet" type="text/css" /><link href="colorbox_appspro/css/shortcodes.template.css" rel="stylesheet" type="text/css" />	<link href="colorbox_appspro/css/style1.css" rel="stylesheet" type="text/css" />		
 	
-	@media (max-width: 970px ) and (min-width: 921px ) {
-	.box.big-tabs .gk-tabs-wrap > ol li { margin: 0 35px 74px 40px !important; }
-	}
-	
-</style>
+		<style type="text/css">
+			.gk-page { max-width: 980px; }
+				#gk-mainbody-columns > section { width: 100%; }
+		</style>
+
+		<link rel="stylesheet" href="colorbox_appspro/css/tablet.css" media="(max-width: 920px)" />
+		<link rel="stylesheet" href="colorbox_appspro/css/mobile.css" media="(max-width: 580px)" />
+
+		<style type="text/css">
+			@media (max-width: 970px ) {
+				.box.big-tabs .gk-arrow { display: none!important; } 
+			}
+			
+			@media (max-width: 970px ) and (min-width: 921px ) {
+			.box.big-tabs .gk-tabs-wrap > ol li { margin: 0 35px 74px 40px !important; }
+			}
+		</style>
+		
 		<script type="text/javascript">
-		var thickboxL10n = {
-			"next":"Next >",
-			"prev":"< Prev",
-			"image":"Image",
-			"of":"of",
-			"close":"Close",
-			"noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.",
-			"loadingAnimation":"http://www.gavick.com/demo/wordpress/appsprotech/wp-includes/js/thickbox/loadingAnimation.gif",
-			"closeImage":"http://www.gavick.com/demo/wordpress/appsprotech/wp-includes/js/thickbox/tb-close.png"
-		};
-	</script>
-	<link rel="stylesheet" href="colorbox_appspro/js/thickbox.css" media="all" />
-	<script type="text/javascript" src="colorbox_appspro/js/thickbox.js"></script>
-		<script type="text/javascript" src="colorbox_appspro/js/gk.scripts.js"></script>
-	<script type="text/javascript" src="colorbox_appspro/js/gk.menu.js"></script>
-	
+			var thickboxL10n = {
+				"next":"Next >",
+				"prev":"< Prev",
+				"image":"Image",
+				"of":"of",
+				"close":"Close",
+				"noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.",
+				"loadingAnimation":"http://www.gavick.com/demo/wordpress/appsprotech/wp-includes/js/thickbox/loadingAnimation.gif",
+				"closeImage":"http://www.gavick.com/demo/wordpress/appsprotech/wp-includes/js/thickbox/tb-close.png"
+			};
+		</script>
 		
-<style>
+		<link rel="stylesheet" href="colorbox_appspro/js/thickbox.css" media="all" />
+		<script type="text/javascript" src="colorbox_appspro/js/thickbox.js"></script>
+		<script type="text/javascript" src="colorbox_appspro/js/gk.scripts.js"></script>
+		<script type="text/javascript" src="colorbox_appspro/js/gk.menu.js"></script>
+		
+		<style>
 			body{font:12px/1.2 Verdana, sans-serif;}
 			a:link, a:visited{text-decoration:none; color:#416CE5;}
 			h2{font-size:135%; margin:15px 0 0 0;}
@@ -200,7 +199,6 @@
 				$(".group1").colorbox({rel:'group1', transition:"none"});
 				$(".group2").colorbox({rel:'group2', transition:"none"});
 				$(".group3").colorbox({rel:'group3', transition:"none"});
-				//$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
 				$(".group4").colorbox({rel:'group4', transition:"none"});
 				$(".group5").colorbox({rel:'group5', transition:"none"});
 				$(".group6").colorbox({rel:'group6', transition:"none", height:"75%", display:"block"});
@@ -226,31 +224,38 @@
 				});
 			});
 		</script>
-		
     </head>
     
     <body class="home blog custom-background" data-tablet-width="920">
-       <div class="templatemo-top-bar" id="templatemo-top">
+       <!-- Menambahkan space kosong di atas static menu -->
+		<!-- <div class="templatemo-top-bar" id="templatemo-top">
            <div class="container">
-                <div class="subheader">
-                </div>
+                <div class="subheader"></div>
             </div>
-        </div>
-        <div class="templatemo-top-menu" >
+        </div> -->
+        
+		<div class="templatemo-top-menu" >
             <div class="container">
-                <!-- Static navbar -->
+				<!-- Static navbar -->
                 <div class="navbar navbar-default" role="navigation">
                     <div class="container">
-                        <div class="navbar-header">
-                                <a class="navbar-brand" href="http://fingertechnology.mobi" rel="nofollow"><img src="images/logo3.jpg" alt="logo" /></a>
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                </button>
+						
+						<div class="navbar-header">
+                                <!-- Logo Fingertech -->
+								<a class="navbar-brand" href="http://fingertechnology.mobi" rel="nofollow">
+									<img src="images/logo3.jpg" alt="logo"/>
+								</a>
                                 
+								<!-- Bundle menu-menu -->
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+									<span class="sr-only">Toggle navigation</span>
+									<!-- Menambahkan jumlah garis pada saat navbar-toggle aktif -->
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+                                </button>
                         </div>
+						
                         <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;margin-right:75px;">
                                 <li><a href="#templatemo-top"><strong>HOME</strong></a></li>
@@ -262,7 +267,8 @@
                             	<li><a href="blog.php" class="external-link"><strong>BLOG</strong></a></li>
 							</ul>
                         </div>
-                    </div><!--/.container-fluid -->
+                    
+					</div><!--/.container-fluid -->
                 </div><!--/.navbar -->
             </div> <!-- /container -->
         </div>

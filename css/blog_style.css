@@ -91,7 +91,8 @@
 .masonry {
   /*background: #EEE;
   padding:5px;*/
-  max-width: 1000px;
+  min-width: 60%;
+  max-width: 2000px;
   margin-top: 20px;
 }
 
@@ -103,10 +104,10 @@
 }
 
 .masonry .item {
-  width:  230px;
-  
-  min-height: 200px;
-  height: auto;
+
+  width:  230px;  
+  /* min-height: 200px; */
+  height: 400px;
   float: left;
   /*background: #D26;*/
   background: #fff;
@@ -118,6 +119,15 @@
 }
 
 .item.w2 { width:  470px; }
+
+.item img {
+	/*width: auto;
+	height: 160px; */
+	
+	object-fit: cover;
+    width:230px;
+    height:160px;
+}
 
 .item:hover {
   /*cursor: pointer;*/
