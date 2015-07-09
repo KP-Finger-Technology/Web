@@ -369,7 +369,7 @@
 							}
 						}
 						$blogQry = mysql_query($blogSql, $koneksi) or die ("Query products salah : ".mysql_error());
-							echo "<div class=\"col-sm-9 col-xs-12 col-md-8\">";
+							echo "<div class=\"col-sm-9 col-xs-12 col-md-8 col-lg-9\">";
 							while ($blogRow = mysql_fetch_array($blogQry)) {
 								// if($number==1){
 									// echo "<div class=\"item\">";
@@ -406,7 +406,7 @@
 					?>
 					
 					<!-- update here-->
-					<div class="col-sm-3 col-xs-12 col-md-4" id="right_content">
+					<div class="col-sm-3 col-xs-12 col-md-4 col-lg-3" id="right_content">
 						<div style="background-color:white;margin-bottom:5px;padding:20px 20px;">
 							<h3>Latest Blogs</h3>
 							<hr>                                    
