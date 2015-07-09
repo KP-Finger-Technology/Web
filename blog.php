@@ -282,7 +282,6 @@
 				<!-- Static navbar -->
                 <div class="navbar navbar-default" role="navigation">
                     <div class="container">
-						
 						<div class="navbar-header">
                                 <!-- Logo Fingertech -->
 								<a class="navbar-brand" href="http://fingertechnology.mobi" rel="nofollow">
@@ -310,7 +309,6 @@
                             	<li><a href="blog.php" class="external-link"><strong>BLOG</strong></a></li>
 							</ul>
                         </div>
-                    
 					</div><!--/.container-fluid -->
                 </div><!--/.navbar -->
             </div> <!-- /container -->
@@ -338,7 +336,7 @@
 					<div class="masonry">
 						<?php
 							$number = 1;
-							if(isset($_POST['search'])){
+							if(isset($_POST['search'])) {
 								$blogSql = "SELECT * FROM blog where title like '%".$_POST['search']."%' ORDER BY publish_on,blogid ASC";
 							}
 							else {
@@ -360,47 +358,48 @@
 							}
 							
 							$blogQry = mysql_query($blogSql, $koneksi) or die ("Query products salah : ".mysql_error());
-							echo "<div class=\"col-sm-9 col-xs-12 col-md-8\">";
-							while ($blogRow = mysql_fetch_array($blogQry)) {
-								// if($number==1){
-									// echo "<div class=\"item\">";
-									// echo "<img src=\"images/blog/".$blogRow['image_name']."\" width=\"470px\">";
-									// echo "<p><b>".$blogRow['title']."</b></p>";
-									
-									// $line=$blogRow['content'];
-									// if (preg_match('/^.{1,300}\b/s', $blogRow['content'], $match))
-									// {
-										// $line=$match[0];
-									// }
-									// echo "<p class=\"blogcontent\">".$line."</p>";
-								// } else {
-										echo "<div class=\"item\">";
-										echo "<a href=\"blog_detail.php?Kode=".$blogRow['blogid']."\">";
-										echo "<img src=\"images/blog/".$blogRow['image_name']."\" width=\"270px\">";
-										echo "<p><b>".$blogRow['title']."</b></p>";
-										echo "</a>";
+							echo "<div class=\"col-sm-9 col-xs-12 col-md-8 col-lg-9\">";
+
+									while ($blogRow = mysql_fetch_array($blogQry)) {
+										// if($number==1){
+											// echo "<div class=\"item\">";
+											// echo "<img src=\"images/blog/".$blogRow['image_name']."\" width=\"470px\">";
+											// echo "<p><b>".$blogRow['title']."</b></p>";
+											
+											// $line=$blogRow['content'];
+											// if (preg_match('/^.{1,300}\b/s', $blogRow['content'], $match))
+											// {
+												// $line=$match[0];
+											// }
+											// echo "<p class=\"blogcontent\">".$line."</p>";
+										// } else {
+												echo "<div class=\"item\">";
+												echo "<a href=\"blog_detail.php?Kode=".$blogRow['blogid']."\">";
+												echo "<img src=\"images/blog/".$blogRow['image_name']."\" width=\"270px\">";
+												echo "<p><b>".$blogRow['title']."</b></p>";
+												echo "</a>";
+												
+												$line=$blogRow['content'];
+												if (preg_match('/^.{1,300}\b/s', $blogRow['content'], $match))
+												{
+													$line=$match[0];
+												}
+												echo "<p class=\"blogcontent\">".$line."</p>";
+										// }
 										
-										$line=$blogRow['content'];
-										if (preg_match('/^.{1,300}\b/s', $blogRow['content'], $match))
-										{
-											$line=$match[0];
-										}
-										echo "<p class=\"blogcontent\">".$line."</p>";
-								// }
-								
-								echo "<div style=\"border-bottom:1px solid #f0f0f0; margin:15px;\"></div>";
-								// echo "<p class=\"viewmore\"><i><a href=\"blog_detail.php?Kode=".$blogRow['blogid']."\">view more..</a></i></p>";
-								echo "</div>";
-								$number++;
-							}
+										echo "<div style=\"border-bottom:1px solid #f0f0f0; margin:15px;\"></div>";
+										// echo "<p class=\"viewmore\"><i><a href=\"blog_detail.php?Kode=".$blogRow['blogid']."\">view more..</a></i></p>";
+										echo "</div>";
+										$number++;
+									}
 							echo "</div>";
 						?>
 					
-							<!-- Update here-->
-							<div class="col-sm-3 col-xs-12 col-md-4" id="right_content">
-								<div style="background-color:white;margin-bottom:5px;padding:20px 20px;">
-									<h3>Latest Blogs</h3>
-									<hr>
+								<!-- Update here-->
+								<div class="col-sm-3 col-xs-12 col-md-4 col-lg-3" id="right_content">
+									<div style="background-color:white;margin-bottom:5px;padding:20px 20px;">
+										<h3>Latest Blogs</h3>
+										<hr>                                    
 										<?php
 											$latestSql = "SELECT * FROM blog ORDER BY publish_on,blogid ASC limit 5";
 											$latestQry = mysql_query($latestSql, $koneksi) or die ("Query products salah : ".mysql_error());
@@ -410,12 +409,12 @@
 												echo "<br>";
 											}
 										?>
-									<hr>
-									
-									<br>
-									
-									<h3>Categories</h3>
-									<hr>
+										<hr>
+										
+										<br>
+										
+										<h3>Categories</h3>
+										<hr>                                    
 										<?php
 											$categorySql = "SELECT * FROM blog group by category ASC";
 											$categoryQry = mysql_query($categorySql, $koneksi) or die ("Query products salah : ".mysql_error());
@@ -425,39 +424,71 @@
 												echo "<br>";
 											}
 										?>
-									<hr>
-									
-									<br>
-									
-									<h3>Archives</h3>
-									<hr>                                    
+										<hr>
+										
+										<br>
+										
+										<h3>Archives</h3>
+										<hr>
 										<?php
 											$tahun = 0;
 											$bulan = 0;
 											$arcSql = "SELECT YEAR(publish_on) AS yr, MONTH(publish_on) AS mnth, DATE_FORMAT(publish_on,'%M') AS mnth2 FROM blog GROUP BY YEAR(publish_on),MONTH(publish_on) ORDER BY yr,mnth DESC;";
 											$arcQry = mysql_query($arcSql, $koneksi) or die ("Query products salah : ".mysql_error());
 											
-											echo "<ul class=\"archive\">";
-											while ($arcRow = mysql_fetch_array($arcQry)) {
-												if ($tahun == $arcRow['yr']) {
-													if($bulan != $arcRow['mnth']) {
+											while ($latestRow = mysql_fetch_array($latestQry)) {
+												echo "<a href=\"blog_detail.php?Kode=".$latestRow['blogid']."\">".$latestRow['title']."</a>";
+												echo "<br>";
+											}
+										?>
+										<hr>
+												
+										<br>
+												
+										<h3>Categories</h3>
+										<hr>
+											<?php
+												$categorySql = "SELECT * FROM blog group by category ASC";
+												$categoryQry = mysql_query($categorySql, $koneksi) or die ("Query products salah : ".mysql_error());
+									
+												while ($categoryRow = mysql_fetch_array($categoryQry)) {
+													echo "<a href=\"blog.php?category=".$categoryRow['category']."\">".$categoryRow['category']."</a>";
+													echo "<br>";
+												}
+											?>
+										<hr>
+												
+										<br>
+										
+										<h3>Archives</h3>
+										<hr>                                    
+											<?php
+												$tahun = 0;
+												$bulan = 0;
+												$arcSql = "SELECT YEAR(publish_on) AS yr, MONTH(publish_on) AS mnth, DATE_FORMAT(publish_on,'%M') AS mnth2 FROM blog GROUP BY YEAR(publish_on),MONTH(publish_on) ORDER BY yr,mnth DESC;";
+												$arcQry = mysql_query($arcSql, $koneksi) or die ("Query products salah : ".mysql_error());
+												
+												echo "<ul class=\"archive\">";
+												while ($arcRow = mysql_fetch_array($arcQry)) {
+													if ($tahun == $arcRow['yr']) {
+														if($bulan != $arcRow['mnth']) {
+															$bulan = $arcRow['mnth'];
+															echo "<li><a href=\"blog.php?year=".$arcRow['yr']."&month=".$arcRow['mnth']."\">".$arcRow['mnth2']."</a></li>";
+														}
+													} else {
+														$tahun = $arcRow['yr'];
+														echo "<a href=\"blog.php?year=".$arcRow['yr']."\">".$arcRow['yr']."</a>";
+
 														$bulan = $arcRow['mnth'];
 														echo "<li><a href=\"blog.php?year=".$arcRow['yr']."&month=".$arcRow['mnth']."\">".$arcRow['mnth2']."</a></li>";
 													}
-												} else {
-													$tahun = $arcRow['yr'];
-													echo "<a href=\"blog.php?year=".$arcRow['yr']."\">".$arcRow['yr']."</a>";
-
-													$bulan = $arcRow['mnth'];
-													echo "<li><a href=\"blog.php?year=".$arcRow['yr']."&month=".$arcRow['mnth']."\">".$arcRow['mnth2']."</a></li>";
 												}
-											}
-											echo "</ul>";
-										?>
-									<hr>
+												echo "</ul>";
+											?>
+										<hr>
+									</div>
 								</div>
 							</div>
-						</div>
 					</div>
 
 					<div class="row text-center" id="reg_newsletter">
