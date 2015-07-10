@@ -284,8 +284,8 @@
                     <div class="container">
 						<div class="navbar-header">
                                 <!-- Logo Fingertech -->
-								<a class="navbar-brand" href="http://fingertechnology.mobi" rel="nofollow">
-									<img src="images/logo3.jpg" alt="logo"/>
+								<a href="http://fingertechnology.mobi" rel="nofollow" >
+									<img src="images/logo3.jpg"  style = "margin-top:8% ; width : 80% " alt="logo"/>
 								</a>
                                 
 								<!-- Bundle menu-menu -->
@@ -397,56 +397,22 @@
 							echo "</div>";
 						?>
 					
-							<!-- Update here-->
-							<div class="col-sm-4 col-xs-12 col-md-4 col-lg-4" id="right_content">
-								<div style="background-color:white;margin-bottom:5px;padding:20px 20px;">
-									<h3>Latest Blogs</h3>
-									<hr>                                    
-									<?php
-										$latestSql = "SELECT * FROM blog ORDER BY publish_on,blogid ASC limit 5";
-										$latestQry = mysql_query($latestSql, $koneksi) or die ("Query products salah : ".mysql_error());
-
-							
-										while ($latestRow = mysql_fetch_array($latestQry)) {
-											echo "<a href=\"blog_detail.php?Kode=".$latestRow['blogid']."\">".$latestRow['title']."</a>";
-											echo "<br>";
-										}
-									?>
-									<hr>
-									
-									<br>
-									
-									<h3>Categories</h3>
-									<hr>                                    
-									<?php
-										$categorySql = "SELECT * FROM blog group by category ASC";
-										$categoryQry = mysql_query($categorySql, $koneksi) or die ("Query products salah : ".mysql_error());
-							
-										while ($categoryRow = mysql_fetch_array($categoryQry)) {
-											echo "<a href=\"blog.php?category=".$categoryRow['category']."\">".$categoryRow['category']."</a>";
-											echo "<br>";
-										}
-									?>
-									<hr>
-									
-									<br>
-									
-									<h3>Archives</h3>
-									<hr>
-									<?php
-										$tahun = 0;
-										$bulan = 0;
-										$arcSql = "SELECT YEAR(publish_on) AS yr, MONTH(publish_on) AS mnth, DATE_FORMAT(publish_on,'%M') AS mnth2 FROM blog GROUP BY YEAR(publish_on),MONTH(publish_on) ORDER BY yr,mnth DESC;";
-										$arcQry = mysql_query($arcSql, $koneksi) or die ("Query products salah : ".mysql_error());
+								<!-- Update here-->
+								<div class="col-sm-3 col-xs-12 col-md-4 col-lg-4" id="right_content">
+									<div style="background-color:white;margin-bottom:5px;padding:20px 20px;">
+										<h3>Latest Blogs</h3>
+										<hr>                                    
+										<?php
+											$latestSql = "SELECT * FROM blog ORDER BY publish_on,blogid ASC limit 5";
+											$latestQry = mysql_query($latestSql, $koneksi) or die ("Query products salah : ".mysql_error());
+								
+											while ($latestRow = mysql_fetch_array($latestQry)) {
+												echo "<a href=\"blog_detail.php?Kode=".$latestRow['blogid']."\">".$latestRow['title']."</a>";
+												echo "<br>";
+											}
+										?>
+										<hr>
 										
-										while ($latestRow = mysql_fetch_array($latestQry)) {
-											echo "<a href=\"blog_detail.php?Kode=".$latestRow['blogid']."\">".$latestRow['title']."</a>";
-											echo "<br>";
-										}
-									?>
-									<hr>
-											
-									<br>
 											
 									<h3>Categories</h3>
 									<hr>
