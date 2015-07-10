@@ -291,15 +291,15 @@
 				<!--  Gambar-gambar carousel -->
 				<div class="carousel-inner">
 					<div class="item active">
-						<a href="#templatemo-welcome"><img src="images/slide_1.jpg"/></a>
+						<a href="#templatemo-welcome"><img class="img_carousel" src="images/slide_1.jpg"/></a>
 					</div>
 					
 					<div class="item">
-						<a href="#templatemo-products"><img src="images/slide_2.jpg"/></a>
+						<a href="#templatemo-products"><img class="img_carousel" src="images/slide_2.jpg"/></a>
 					</div>
 					
 					<div class="item">
-						<a href="#templatemo-about"><img src="images/slide_3.jpg"/></a>
+						<a href="#templatemo-about"><img class="img_carousel" src="images/slide_3.jpg"/></a>
 					</div>
                 </div>
 				
