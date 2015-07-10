@@ -300,13 +300,13 @@
 						
                         <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;margin-right:75px;">
-                                <li><a href="#templatemo-top"><strong>HOME</strong></a></li>
-                                <li><a href="#templatemo-welcome"><strong>ABOUT</strong></a></li>
-                                <li><a href="#templatemo-products"><strong>PRODUCTS</strong></a></li>
-                                <li><a href="#templatemo-about"><strong>SERVICES</strong></a></li>
-                                <li><a href="#templatemo-career"><strong>CAREER</strong></a></li>
-                                <li><a href="#templatemo-contact"><strong>CONTACT</strong></a></li>
-                            	<li><a href="blog.php" class="external-link"><strong>BLOG</strong></a></li>
+                                <li><a href="index.php#templatemo-top" class="external-link"><strong>HOME</strong></a></li>
+                                <li><a href="index.php#templatemo-welcome" class="external-link"><strong>ABOUT</strong></a></li>
+                                <li><a href="index.php#templatemo-products" class="external-link"><strong>PRODUCTS</strong></a></li>
+                                <li><a href="index.php#templatemo-about" class="external-link"><strong>SERVICES</strong></a></li>
+                                <li><a href="index.php#templatemo-career" class="external-link"><strong>CAREER</strong></a></li>
+                                <li><a href="index.php#templatemo-contact" class="external-link"><strong>CONTACT</strong></a></li>
+                            	<li><a href="" style="background-color: #16c5fe;color:#fff;"><strong>BLOG</strong></a></li>
 							</ul>
                         </div>
 					</div><!--/.container-fluid -->
@@ -339,6 +339,7 @@
 							if(isset($_POST['search'])) {
 								$blogSql = "SELECT * FROM blog where title like '%".$_POST['search']."%' ORDER BY publish_on,blogid ASC";
 							}
+
 							else {
 								if(isset($_GET)) {
 									if(isset($_GET['category'])) {
@@ -351,6 +352,7 @@
 										}
 									} else {
 										$blogSql = "SELECT * FROM blog ORDER BY publish_on,blogid ASC";
+
 									}
 								} else {
 									$blogSql = "SELECT * FROM blog ORDER BY publish_on,blogid ASC";
@@ -411,10 +413,9 @@
 										?>
 										<hr>
 										
-										<br>
-										
-										<h3>Categories</h3>
-										<hr>                                    
+											
+									<h3>Categories</h3>
+									<hr>
 										<?php
 											$categorySql = "SELECT * FROM blog group by category ASC";
 											$categoryQry = mysql_query($categorySql, $koneksi) or die ("Query products salah : ".mysql_error());
@@ -424,71 +425,39 @@
 												echo "<br>";
 											}
 										?>
-										<hr>
-										
-										<br>
-										
-										<h3>Archives</h3>
-										<hr>
+									<hr>
+											
+									<br>
+									
+									<h3>Archives</h3>
+									<hr>                                    
 										<?php
 											$tahun = 0;
 											$bulan = 0;
 											$arcSql = "SELECT YEAR(publish_on) AS yr, MONTH(publish_on) AS mnth, DATE_FORMAT(publish_on,'%M') AS mnth2 FROM blog GROUP BY YEAR(publish_on),MONTH(publish_on) ORDER BY yr,mnth DESC;";
 											$arcQry = mysql_query($arcSql, $koneksi) or die ("Query products salah : ".mysql_error());
 											
-											while ($latestRow = mysql_fetch_array($latestQry)) {
-												echo "<a href=\"blog_detail.php?Kode=".$latestRow['blogid']."\">".$latestRow['title']."</a>";
-												echo "<br>";
-											}
-										?>
-										<hr>
-												
-										<br>
-												
-										<h3>Categories</h3>
-										<hr>
-											<?php
-												$categorySql = "SELECT * FROM blog group by category ASC";
-												$categoryQry = mysql_query($categorySql, $koneksi) or die ("Query products salah : ".mysql_error());
-									
-												while ($categoryRow = mysql_fetch_array($categoryQry)) {
-													echo "<a href=\"blog.php?category=".$categoryRow['category']."\">".$categoryRow['category']."</a>";
-													echo "<br>";
-												}
-											?>
-										<hr>
-												
-										<br>
-										
-										<h3>Archives</h3>
-										<hr>                                    
-											<?php
-												$tahun = 0;
-												$bulan = 0;
-												$arcSql = "SELECT YEAR(publish_on) AS yr, MONTH(publish_on) AS mnth, DATE_FORMAT(publish_on,'%M') AS mnth2 FROM blog GROUP BY YEAR(publish_on),MONTH(publish_on) ORDER BY yr,mnth DESC;";
-												$arcQry = mysql_query($arcSql, $koneksi) or die ("Query products salah : ".mysql_error());
-												
-												echo "<ul class=\"archive\">";
-												while ($arcRow = mysql_fetch_array($arcQry)) {
-													if ($tahun == $arcRow['yr']) {
-														if($bulan != $arcRow['mnth']) {
-															$bulan = $arcRow['mnth'];
-															echo "<li><a href=\"blog.php?year=".$arcRow['yr']."&month=".$arcRow['mnth']."\">".$arcRow['mnth2']."</a></li>";
-														}
-													} else {
-														$tahun = $arcRow['yr'];
-														echo "<a href=\"blog.php?year=".$arcRow['yr']."\">".$arcRow['yr']."</a>";
-
+											echo "<ul class=\"archive\">";
+											while ($arcRow = mysql_fetch_array($arcQry)) {
+												if ($tahun == $arcRow['yr']) {
+													if($bulan != $arcRow['mnth']) {
 														$bulan = $arcRow['mnth'];
 														echo "<li><a href=\"blog.php?year=".$arcRow['yr']."&month=".$arcRow['mnth']."\">".$arcRow['mnth2']."</a></li>";
 													}
+												} else {
+													$tahun = $arcRow['yr'];
+													echo "<a href=\"blog.php?year=".$arcRow['yr']."\">".$arcRow['yr']."</a>";
+
+													$bulan = $arcRow['mnth'];
+													echo "<li><a href=\"blog.php?year=".$arcRow['yr']."&month=".$arcRow['mnth']."\">".$arcRow['mnth2']."</a></li>";
 												}
-												echo "</ul>";
-											?>
-										<hr>
-									</div>
+											}
+											echo "</ul>";
+										?>
+									<hr>
 								</div>
 							</div>
+						</div>
 					</div>
 
 					<div class="row text-center" id="reg_newsletter">
