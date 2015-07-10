@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <?php
 	include "conn.php";
+	
+	function isMobile() {
+		return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+	}
 ?>
 <html lang="en">
     <head>
@@ -683,7 +687,7 @@
                             <hr class="team_hr2 team_hr_right2 hr_gray"/>
                         </div>
 						
-                        <div class="col-md-12">
+                        <div class="col-md-12 col-xs-12 col-sm-12">
                             <div class="templatemo-service-contact" >
                                 <p style="font-size:22px;"><strong>HAVE A PROJECT IN MIND?</strong></p>
                                 <p style="font-size:45px;"><strong>LET'S CHAT!</strong></p>
@@ -692,7 +696,7 @@
                     </div>
 					
 					<!-- Isi -->
-                    <div class="col-md-8">
+                    <div class="col-md-8 col-sm-8 col-xs-12">
                         <div class="templatemo-contact-map" id="map-canvas"> </div>  
                         <?php
 							$contactSql = "SELECT * FROM pagecontact ORDER BY contactid ASC";
@@ -702,7 +706,7 @@
 						?>                   
 								<i>
                     </div>
-									<div class="col-md-4 contact_right">
+									<div class="col-md-4 col-xs-12 col-sm-4 contact_right">
 										<p>You can find us on.</p>
 										<p><img src="images/location.png" alt="icon 1" /> <?php echo $contactRow['address']; ?></p>
 										<p><img src="images/phone1.png" alt="icon 2" /> <?php echo $contactRow['phone']; ?></p>
