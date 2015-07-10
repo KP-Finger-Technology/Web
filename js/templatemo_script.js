@@ -80,15 +80,16 @@ jQuery(function($) {
 function initialize() {
 	var myLatlng = new google.maps.LatLng(-6.116616,106.760806);
 
-    var mapOptions = {
+	var mapOptions = {
 		scrollwheel: false,
 		navigationControl: false,
 		mapTypeControl: false,
-		scaleControl: false,
+		scaleControl: true,
 		draggable: false,
 		zoom: 16,
+		panControl: false,
 		center: myLatlng
-    };
+    }; 
 	
 	//var tanda = new google.maps.Marker(-6.116616,106.760806);
 	var map = new google.maps.Map(document.getElementById('map-canvas'),  mapOptions);
@@ -99,7 +100,42 @@ function initialize() {
       title: 'Fingertechnology'
  	});
 
+	google.maps.event.addListener(map, 'click', function(event){
+		// disableMovement(false);
+		this.setOptions({
+			draggable: true
+		});
+	});
+	
+	/*
+	google.maps.event.addListener(marker, 'dragstart', function() {
+		disableMovement(true);
+	});
+
+	google.maps.event.addListener(marker, 'dragend', function() {
+		disableMovement(false);
+	}); */
     //var map = new google.maps.Map(document.getElementById('map-canvas'),  mapOptions);
+}
+
+function disableMovement(disable) {
+    var mapOptions;
+    if (disable) {
+        mapOptions = {
+            draggable: false,
+            scrollwheel: false,
+            disableDoubleClickZoom: true,
+            zoomControl: false
+        };
+    } else {
+        mapOptions = {
+            draggable: true,
+            scrollwheel: true,
+            disableDoubleClickZoom: false,
+            zoomControl: true
+        };
+    }
+    map.setOptions(mapOptions);
 }
 
 function tandai(lokasi){
