@@ -280,12 +280,18 @@
         
         <div>
             <!-- Carousel -->
-            <div id="templatemo-carousel" class="carousel slide" data-ride="carousel">
+            <!-- <div id="templatemo-carousel" class="carousel slide" data-ride="carousel"> -->
+            <div id="finger-primary-carousel" class="carousel slide" data-ride="carousel">
                 <!-- Menambahkan indikator carousel di bagian bawah gambar-->
 				<ol class="carousel-indicators">
-                    <li data-target="#templatemo-carousel" data-slide-to="0" class="active"/>
+                    <!--
+					<li data-target="#templatemo-carousel" data-slide-to="0" class="active"/>
                     <li data-target="#templatemo-carousel" data-slide-to="1"/>
-                    <li data-target="#templatemo-carousel" data-slide-to="2"/>
+                    <li data-target="#templatemo-carousel" data-slide-to="2"/> -->
+					
+					<li data-target="#finger-primary-carousel" data-slide-to="0" class="active"/>
+                    <li data-target="#finger-primary-carousel" data-slide-to="1"/>
+                    <li data-target="#finger-primary-carousel" data-slide-to="2"/>
                 </ol>
 				
 				<!--  Gambar-gambar carousel -->
@@ -303,8 +309,11 @@
 					</div>
                 </div>
 				
-                <a class="left carousel-control" href="#templatemo-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-                <a class="right carousel-control" href="#templatemo-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                <!-- <a class="left carousel-control" href="#templatemo-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="right carousel-control" href="#templatemo-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
+				
+				<a class="left carousel-control" href="#finger-primary-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                <a class="right carousel-control" href="#finger-primary-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
             </div><!-- /#templatemo-carousel -->
         </div>
         
