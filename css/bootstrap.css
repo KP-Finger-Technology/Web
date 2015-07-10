@@ -6346,7 +6346,8 @@ button.close {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   display: block;
-  height: auto;
+  height: auto !important;
+  object-fit: cover;
   max-width: 100%;
   line-height: 1;
 }

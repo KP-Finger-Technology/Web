@@ -364,3 +364,7 @@
 	content: "\e0d8";
 }
 
+.img_carousel {
+	/*width: auto;
+	object-fit: cover;*/
+}
