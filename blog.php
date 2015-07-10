@@ -284,8 +284,8 @@
                     <div class="container">
 						<div class="navbar-header">
                                 <!-- Logo Fingertech -->
-								<a class="navbar-brand" href="http://fingertechnology.mobi" rel="nofollow">
-									<img src="images/logo3.jpg" alt="logo"/>
+								<a href="http://fingertechnology.mobi" rel="nofollow" >
+									<img src="images/logo3.jpg"  style = "margin-top:8% ; width : 80% " alt="logo"/>
 								</a>
                                 
 								<!-- Bundle menu-menu -->
@@ -358,7 +358,7 @@
 							}
 							
 							$blogQry = mysql_query($blogSql, $koneksi) or die ("Query products salah : ".mysql_error());
-							echo "<div class=\"col-sm-9 col-xs-12 col-md-8 col-lg-9\">";
+							echo "<div class=\"col-sm-9 col-xs-12 col-md-8 col-lg-8\">";
 
 									while ($blogRow = mysql_fetch_array($blogQry)) {
 										// if($number==1){
@@ -396,7 +396,7 @@
 						?>
 					
 								<!-- Update here-->
-								<div class="col-sm-3 col-xs-12 col-md-4 col-lg-3" id="right_content">
+								<div class="col-sm-3 col-xs-12 col-md-4 col-lg-4" id="right_content">
 									<div style="background-color:white;margin-bottom:5px;padding:20px 20px;">
 										<h3>Latest Blogs</h3>
 										<hr>                                    

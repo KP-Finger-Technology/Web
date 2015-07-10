@@ -285,8 +285,8 @@
 						
 						<div class="navbar-header">
                                 <!-- Logo Fingertech -->
-								<a class="navbar-brand" href="http://fingertechnology.mobi" rel="nofollow">
-									<img src="images/logo3.jpg" alt="logo"/>
+								<a href="http://fingertechnology.mobi" rel="nofollow" >
+									<img src="images/logo3.jpg"  style = "margin-top:8% ; width : 80% " alt="logo"/>
 								</a>
                                 
 								<!-- Bundle menu-menu -->
