@@ -568,7 +568,7 @@
 							</div>
 
 							<div class="row text-center" id="reg_newsletter">
-								<h3><b>Sign up to our rmail newsletter</b></h3> 
+								<h3><b>Sign up to our email newsletter</b></h3> 
 								<p>to get the latest news about fingertechnology</p>
 								<a class="iframe2" href="subscribe.php" data-group="sub" title="">
 									<button>Subscribe Now!</button>
