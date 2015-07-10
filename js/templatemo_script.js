@@ -78,28 +78,27 @@ jQuery(function($) {
 });
 
 function initialize() {
-	var myLatlng = new google.maps.LatLng(-6.116616,106.760806);
+	var myLatlng = new google.maps.LatLng(-6.116616, 106.760806);
 
     var mapOptions = {
-		scrollwheel: false,
-		navigationControl: false,
-		mapTypeControl: false,
-		scaleControl: false,
+		center: myLatlng,
 		draggable: false,
-		zoom: 16,
-		center: myLatlng
+		// <?php echo(isMobile() ? 'draggable: false' : ''); ?>
+		scaleControl: false,
+		scrollwheel: false,
+		mapTypeControl: false,
+		navigationControl: false,
+		zoom: 16
     };
 	
 	//var tanda = new google.maps.Marker(-6.116616,106.760806);
 	var map = new google.maps.Map(document.getElementById('map-canvas'),  mapOptions);
 	
 	var marker = new google.maps.Marker({
-      position: myLatlng,
-      map: map,
-      title: 'Fingertechnology'
+		position: myLatlng,
+		map: map,
+		title: 'Fingertechnology'
  	});
-
-    //var map = new google.maps.Map(document.getElementById('map-canvas'),  mapOptions);
 }
 
 function tandai(lokasi){
@@ -118,5 +117,4 @@ function scrollTo(selectors)
     if(!$(selectors).size()) return;
     var selector_top = $(selectors).offset().top - top_menu_height;
     $('html,body').animate({ scrollTop: selector_top }, 'slow');
-
 }
