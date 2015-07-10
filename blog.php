@@ -300,13 +300,13 @@
 						
                         <div class="navbar-collapse collapse" id="templatemo-nav-bar">
                             <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;margin-right:75px;">
-                                <li><a href="#templatemo-top"><strong>HOME</strong></a></li>
-                                <li><a href="#templatemo-welcome"><strong>ABOUT</strong></a></li>
-                                <li><a href="#templatemo-products"><strong>PRODUCTS</strong></a></li>
-                                <li><a href="#templatemo-about"><strong>SERVICES</strong></a></li>
-                                <li><a href="#templatemo-career"><strong>CAREER</strong></a></li>
-                                <li><a href="#templatemo-contact"><strong>CONTACT</strong></a></li>
-                            	<li><a href="blog.php" class="external-link"><strong>BLOG</strong></a></li>
+                                <li><a href="index.php#templatemo-top" class="external-link"><strong>HOME</strong></a></li>
+                                <li><a href="index.php#templatemo-welcome" class="external-link"><strong>ABOUT</strong></a></li>
+                                <li><a href="index.php#templatemo-products" class="external-link"><strong>PRODUCTS</strong></a></li>
+                                <li><a href="index.php#templatemo-about" class="external-link"><strong>SERVICES</strong></a></li>
+                                <li><a href="index.php#templatemo-career" class="external-link"><strong>CAREER</strong></a></li>
+                                <li><a href="index.php#templatemo-contact" class="external-link"><strong>CONTACT</strong></a></li>
+                            	<li><a href="" style="background-color: #16c5fe;color:#fff;"><strong>BLOG</strong></a></li>
 							</ul>
                         </div>
 					</div><!--/.container-fluid -->
