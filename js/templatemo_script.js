@@ -81,9 +81,15 @@ function initialize() {
 	var myLatlng = new google.maps.LatLng(-6.116616,106.760806);
 
     var mapOptions = {
-      zoom: 18,
-      center: myLatlng
+		scrollwheel: false,
+		navigationControl: false,
+		mapTypeControl: false,
+		scaleControl: false,
+		draggable: false,
+		zoom: 16,
+		center: myLatlng
     };
+	
 	//var tanda = new google.maps.Marker(-6.116616,106.760806);
 	var map = new google.maps.Map(document.getElementById('map-canvas'),  mapOptions);
 	
